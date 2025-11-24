@@ -1,6 +1,6 @@
 "use client";
 
-import { Instagram, Facebook, Music } from 'lucide-react';
+import { Instagram, Music } from 'lucide-react';
 import Image from 'next/image';
 
 export function Footer() {
@@ -19,9 +19,8 @@ export function Footer() {
                     <p className="text-gray-500 text-sm mt-2">© 2025 Todos los derechos reservados.</p>
                 </div>
                 <div className="flex space-x-6">
-                    <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors"><Facebook size={24} /></a>
-                    <a href="#" className="text-gray-400 hover:text-pink-500 transition-colors"><Instagram size={24} /></a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors"><Music size={24} /></a>
+                    <a href="https://www.instagram.com/bar_sambuca/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors"><Instagram size={24} /></a>
+                    <a href="https://www.tiktok.com/@bar_sambuca_cdmx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Music size={24} /></a> 
                 </div>
             </div>
         </footer>
