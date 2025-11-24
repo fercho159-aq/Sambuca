@@ -3,16 +3,20 @@
 import { MapPin, Clock, ChevronRight } from "lucide-react";
 
 const branches = [
-    { name: "Sambuca Condesa", address: "Av. Amsterdam 24, Hipódromo, Cuauhtémoc, CDMX", hours: "Jue-Dom 6pm - 3am" },
-    { name: "Sambuca Roma", address: "Orizaba 160, Roma Nte., Cuauhtémoc, CDMX", hours: "Mar-Dom 5pm - 2am" },
-    { name: "Sambuca Polanco", address: "Av. Presidente Masaryk 299, Polanco, Miguel Hidalgo, CDMX", hours: "Todos los días 2pm - 12am" },
+    { name: "Bar Sambuca San Ángel", address: "Rio de la Magdalena 38, Tizapán San Ángel, Álvaro Obregón, 01000 CDMX", hours: "Jue-Dom 6pm - 3am" },
+    { name: "Sambuca Roma", address: "Av. Yucatán 147, Roma Nte., Cuauhtémoc, 06700 CDMX", hours: "Mar-Dom 5pm - 2am" },
+    { name: "Sambuca Copilco", address: "Av. Pedro Henríquez Ureña 546, Los Reyes, Coyoacán, 04330 CDMX", hours: "Todos los días 2pm - 12am" },
+    { name: "Bar Sambuca Cuauhtémoc", address: "Claudio Bernard LOC COM, Doctores, Cuauhtémoc, 06720 CDMX", hours: "Jue-Sab 7pm - 3am" },
+    { name: "Sambuca Marina Nacional", address: "Av. Marina Nacional 286, Anáhuac I Secc, Miguel Hidalgo, 11320 CDMX", hours: "Vie-Sab 8pm - 4am" },
 ];
 
 export function LocationsSection() {
     return (
         <section id="sucursales" className="py-20 px-4 bg-gradient-to-t from-pink-900/20 to-black">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black text-center mb-16 uppercase border-b-4 border-pink-600 inline-block pb-2">Encuentra tu Sede</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-black uppercase text-glow-primary inline-block pb-2">Encuentra tu Sede</h2>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -36,7 +40,7 @@ export function LocationsSection() {
               ))}
             </div>
 
-            <div className="h-[400px] bg-gray-800 rounded-2xl relative overflow-hidden border-2 border-gray-700 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+            <div className="h-[400px] md:h-full min-h-[400px] bg-gray-800 rounded-2xl relative overflow-hidden border-2 border-gray-700 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=1931&auto=format&fit=crop')] bg-cover opacity-30 grayscale"></div>
                  <div className="absolute inset-0 flex items-center justify-center">
                     <p className="text-2xl font-black text-white bg-black/70 px-6 py-3 rounded backdrop-blur-sm">
