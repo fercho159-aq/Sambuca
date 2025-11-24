@@ -9,12 +9,10 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        body: ['Bebas Neue', 'sans-serif'],
-        headline: ['Bebas Neue', 'sans-serif'],
-        code: ['monospace'],
-      },
       colors: {
+        'neon-pink': 'hsl(var(--neon-pink))',
+        'neon-green': 'hsl(var(--neon-green))',
+        'neon-blue': 'hsl(var(--neon-blue))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -92,6 +90,9 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      fontFamily: {
+        sans: ['"Bebas Neue"', 'sans-serif'],
       },
     },
   },

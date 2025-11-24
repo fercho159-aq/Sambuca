@@ -24,6 +24,11 @@
     --input: 0 0% 15%;
     --ring: 330 100% 71%;
     --radius: 0.5rem;
+
+    /* New Neon Colors */
+    --neon-pink: 300 100% 50%;
+    --neon-green: 120 100% 50%;
+    --neon-blue: 180 100% 50%;
   }
   .dark {
     --background: 0 0% 0%;
@@ -75,5 +80,17 @@
   }
     .box-glow-accent {
      box-shadow: 0 0 2px hsl(var(--accent)), 0 0 8px hsl(var(--accent)), 0 0 12px hsl(var(--accent));
+  }
+  .text-neon-pink {
+    color: hsl(var(--neon-pink));
+  }
+  .text-neon-green {
+    color: hsl(var(--neon-green));
+  }
+  .text-neon-blue {
+    color: hsl(var(--neon-blue));
+  }
+  .bg-neon-pink {
+    background-color: hsl(var(--neon-pink));
   }
 }

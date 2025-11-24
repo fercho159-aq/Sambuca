@@ -52,7 +52,7 @@ export function Header() {
         <Button
           asChild
           variant="ghost"
-          className="text-primary border-2 border-primary rounded-none hover:bg-primary hover:text-primary-foreground text-lg font-headline tracking-wider transition-all duration-300 hover:box-glow-primary px-6 py-2 h-auto"
+          className="text-accent border-2 border-accent rounded-none hover:bg-accent hover:text-accent-foreground text-lg font-headline tracking-wider transition-all duration-300 hover:box-glow-accent px-6 py-2 h-auto"
         >
           <Link href="/reservar">Reservar</Link>
         </Button>
