@@ -43,11 +43,11 @@ export function LocationsSection() {
             <h2 className="text-4xl md:text-6xl font-black uppercase text-glow-primary inline-block pb-2">Encuentra tu Sede</h2>
           </div>
           
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {branches.map((branch, idx) => (
-              <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-card/50 p-6 rounded-2xl border border-border/30">
+              <div key={idx} className="bg-card/50 p-6 rounded-2xl border border-border/30 flex flex-col gap-4">
                 <div className="space-y-4">
-                  <h3 className="text-3xl font-bold text-primary group-hover:text-neon-green transition-colors">{branch.name}</h3>
+                  <h3 className="text-3xl font-bold text-primary">{branch.name}</h3>
                   <div className="flex items-start text-foreground/80">
                       <MapPin size={24} className="mr-3 mt-1 text-accent flex-shrink-0" />
                       <p>{branch.address}</p>
@@ -57,7 +57,7 @@ export function LocationsSection() {
                       <p className="text-sm">{branch.hours}</p>
                   </div>
                 </div>
-                <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-primary/50 box-glow-primary">
+                <div className="w-full h-64 rounded-lg overflow-hidden border-2 border-primary/50 box-glow-primary">
                   <iframe
                     src={branch.mapSrc}
                     width="100%"
