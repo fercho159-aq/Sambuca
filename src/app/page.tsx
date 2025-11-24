@@ -4,9 +4,10 @@ import { Header } from "@/components/landing/header";
 import { Footer } from "@/components/landing/footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { MapPin, Clock, ChevronRight, PartyPopper } from "lucide-react";
+import { PartyPopper, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { NeonDrinkCard } from "@/components/landing/neon-drink-card";
+import { LocationsSection } from "@/components/landing/locations-section";
 
 
 export default function Home() {
@@ -142,6 +143,7 @@ export default function Home() {
         </div>
       </section>
 
+      <LocationsSection />
       <Footer />
     </div>
   );
