@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/nosotros", label: "Nosotros" },
@@ -40,10 +41,13 @@ export function Header() {
         hasScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
       )}
     >
-      <Link href="/">
-        <h1 className="text-3xl md:text-4xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 animate-pulse cursor-pointer">
-          SAMBUCA
-        </h1>
+      <Link href="/" className="relative h-12 w-48">
+        <Image
+          src="/logo.png"
+          alt="Sambuca Logo"
+          fill
+          className="object-contain"
+        />
       </Link>
 
       {/* Desktop Navigation */}
@@ -85,9 +89,14 @@ export function Header() {
             </SheetHeader>
             <nav className="flex flex-col items-center justify-center h-full gap-8">
               <Link href="/">
-                <h1 className="text-4xl font-headline text-glow-primary tracking-widest cursor-pointer mb-8">
-                  SAMBUCA
-                </h1>
+                <div className="relative h-16 w-56 mb-8">
+                  <Image
+                    src="/logo.png"
+                    alt="Sambuca Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </Link>
               {navLinks.map((link) => (
                 <Link
