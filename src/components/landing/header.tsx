@@ -43,7 +43,7 @@ export function Header() {
     >
       <Link href="/" className="relative h-12 w-48">
         <Image
-          src="/logo.png"
+          src="/images/logo sambuca.png"
           alt="Sambuca Logo"
           fill
           className="object-contain"
@@ -91,7 +91,7 @@ export function Header() {
               <Link href="/">
                 <div className="relative h-16 w-56 mb-8">
                   <Image
-                    src="/logo.png"
+                    src="/images/logo sambuca.pn"
                     alt="Sambuca Logo"
                     fill
                     className="object-contain"
