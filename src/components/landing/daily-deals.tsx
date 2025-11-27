@@ -27,7 +27,7 @@ const promotions = {
     { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: "4.8 Litros" },
   ],
   5: [ // Viernes
-    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS" },
+    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORden de 6 ALITAS + PAPAS" },
     { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: "4.8 Litros" },
   ],
   6: [ // Sábado
@@ -70,14 +70,16 @@ export function DailyDeals() {
         </div>
 
         {todaysPromos.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="flex flex-col gap-8 max-w-5xl mx-auto">
             {todaysPromos.map((promo, index) => (
-              <div key={index} className="border-2 border-primary/50 rounded-2xl p-6 text-center bg-card/70 backdrop-blur-sm group hover:border-primary hover:scale-105 transition-all duration-300 flex flex-col justify-between hover:box-glow-primary">
-                <div>
-                    <h3 className="text-3xl font-headline tracking-wider text-primary group-hover:text-glow transition-all">{promo.title}</h3>
-                    <p className="font-mono text-4xl text-neon-yellow text-glow my-4">{promo.price}</p>
+              <div key={index} className="border-2 border-primary/30 rounded-2xl p-6 bg-card/50 backdrop-blur-sm group hover:border-primary hover:scale-105 transition-all duration-300 hover:box-glow-primary flex flex-col md:flex-row items-center justify-between md:items-center text-center md:text-left gap-4">
+                <div className="flex-grow">
+                    <h3 className="text-4xl font-headline tracking-wider text-primary group-hover:text-glow transition-all">{promo.title}</h3>
+                    <p className="text-muted-foreground text-sm mt-1">{promo.description}</p>
                 </div>
-                <p className="text-muted-foreground text-sm h-12 flex items-center justify-center">{promo.description}</p>
+                <div className="bg-black/50 rounded-lg px-6 py-2 border border-neon-yellow">
+                  <p className="font-mono text-5xl text-neon-yellow text-glow">{promo.price}</p>
+                </div>
               </div>
             ))}
           </div>
