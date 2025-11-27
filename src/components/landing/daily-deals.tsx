@@ -57,7 +57,7 @@ export function DailyDeals() {
     const dayName = dayNames[currentDay];
 
   return (
-    <section id="promos" className="py-20 px-4 bg-gradient-to-b from-black via-gray-900/50 to-black">
+    <section id="promos" className="py-20 px-4 bg-gradient-to-t from-pink-900/20 to-black">
       <div className="container mx-auto">
         <div className="text-center mb-12">
             <h2 className="text-5xl md:text-7xl font-headline tracking-widest uppercase">
@@ -70,12 +70,12 @@ export function DailyDeals() {
         {todaysPromos.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {todaysPromos.map((promo, index) => (
-              <div key={index} className="border-2 border-primary/50 rounded-2xl p-6 text-center bg-card/70 backdrop-blur-sm group hover:border-primary hover:scale-105 transition-all duration-300">
-                <div className="relative inline-block">
+              <div key={index} className="border-2 border-primary/50 rounded-2xl p-6 text-center bg-card/70 backdrop-blur-sm group hover:border-primary hover:scale-105 transition-all duration-300 flex flex-col justify-between hover:box-glow-primary">
+                <div>
                     <h3 className="text-3xl font-headline tracking-wider text-primary group-hover:text-glow transition-all">{promo.title}</h3>
                     <p className="font-mono text-4xl text-neon-yellow text-glow my-4">{promo.price}</p>
                 </div>
-                <p className="text-muted-foreground text-sm h-12">{promo.description}</p>
+                <p className="text-muted-foreground text-sm h-12 flex items-center justify-center">{promo.description}</p>
               </div>
             ))}
           </div>
