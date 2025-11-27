@@ -1,10 +1,58 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
 
+const galleryImages = [
+    {
+      "id": "gallery1",
+      "description": "A person holding a vibrant pink cocktail with a neon light in the background.",
+      "imageUrl": "/images/pato-shot.jpg",
+      "imageHint": "neon cocktail"
+    },
+    {
+      "id": "gallery2",
+      "description": "A group of friends laughing and cheering with drinks at a bar.",
+      "imageUrl": "/images/DSC05225.JPG",
+      "imageHint": "bar friends"
+    },
+    {
+      "id": "gallery3",
+      "description": "A close-up of a blue cocktail with a lime garnish, glowing under blue light.",
+      "imageUrl": "/images/DSC05226.JPG",
+      "imageHint": "blue cocktail"
+    },
+    {
+      "id": "gallery4",
+      "description": "A DJ's hands on a mixer with a lively crowd dancing in the background.",
+      "imageUrl": "/images/DSC05245.JPG",
+      "imageHint": "DJ party"
+    },
+    {
+      "id": "gallery5",
+      "description": "A neon sign that says 'Good Vibes Only' illuminating a brick wall.",
+      "imageUrl": "/images/DSC05296.JPG",
+      "imageHint": "neon sign"
+    },
+    {
+      "id": "gallery6",
+      "description": "Two people clinking cocktail glasses in a toast at a dimly lit bar.",
+      "imageUrl": "/images/DSC05343.JPG",
+      "imageHint": "bar toast"
+    },
+    {
+      "id": "gallery7",
+      "description": "A delicious-looking plate of bar food, like wings or nachos, under warm light.",
+      "imageUrl": "/images/DSC04488.JPG",
+      "imageHint": "bar food"
+    },
+    {
+      "id": "gallery8",
+      "description": "The interior of a bar with people sitting at tables, with a vibrant, energetic atmosphere.",
+      "imageUrl": "/images/DSC05341.JPG",
+      "imageHint": "bar atmosphere"
+    }
+  ];
+
 export function GallerySection() {
-  const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
-  
   if (galleryImages.length < 8) {
     // This is a fallback in case not enough gallery images are defined
     return null;
