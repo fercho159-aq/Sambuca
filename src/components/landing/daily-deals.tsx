@@ -42,10 +42,12 @@ export function DailyDeals() {
     const [currentDay, setCurrentDay] = useState<number | null>(null);
 
     useEffect(() => {
+        // This code now runs only on the client, after hydration
         setCurrentDay(new Date().getDay());
-    }, []);
+    }, []); // Empty dependency array ensures this runs once on mount
     
     if (currentDay === null) {
+        // Render a placeholder or loading state on the server and initial client render
         return (
             <section id="promos" className="py-20 bg-black text-center">
                 <h2 className="text-4xl font-headline tracking-widest text-neon-pink text-glow animate-pulse">Cargando promos...</h2>

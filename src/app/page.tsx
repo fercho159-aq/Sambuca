@@ -12,13 +12,11 @@ export default function Home() {
   return (
     <div className="bg-black min-h-screen text-white font-sans selection:bg-pink-500 selection:text-white">
       <Header />
-
-      <HeroCarousel />
-
-      <DailyDeals />
-
-      <LocationsSection />
-      
+      <main>
+        <HeroCarousel />
+        <DailyDeals />
+        <LocationsSection />
+      </main>
       <Footer />
     </div>
   );
