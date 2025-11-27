@@ -225,7 +225,7 @@ export function MenuSection() {
         <TabsContent value="promociones">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {promociones.map((promo, index) => (
-              <Card key={index} className="bg-card border-2 border-accent/50 hover:border-accent transition-all duration-300 group hover:box-glow flex flex-col">
+              <Card key={index} className="bg-card border-2 border-accent/50 hover:border-accent transition-all duration-300 group hover:box-glow-accent flex flex-col">
                  <CardHeader>
                   <CardTitle className="text-3xl font-headline tracking-wider text-accent transition-all">{promo.day}</CardTitle>
                 </CardHeader>
@@ -248,7 +248,7 @@ export function MenuSection() {
         <TabsContent value="paquetes">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {paquetes.map((pkg, index) => (
-                    <Card key={index} className="bg-card border-2 border-primary/50 hover:border-primary transition-all duration-300 group hover:box-glow">
+                    <Card key={index} className="bg-card border-2 border-primary/50 hover:border-primary transition-all duration-300 group hover:box-glow-primary">
                         <CardHeader>
                             <CardTitle className="text-4xl font-headline tracking-wider text-primary group-hover:text-glow transition-all duration-300">{pkg.title}</CardTitle>
                         </CardHeader>
@@ -267,10 +267,10 @@ export function MenuSection() {
           <div className="space-y-12">
             {Object.entries(bebidas).map(([category, drinks]) => (
               <div key={category}>
-                <h3 className="text-4xl md:text-5xl font-headline tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-400 text-glow mb-6">{category}</h3>
+                <h3 className="text-4xl md:text-5xl font-headline tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-400 text-glow-primary mb-6">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {drinks.map((drink) => {
-                    const colorClass = colorClasses[drink.color || 'default'];
+                    const colorClass = colorClasses[drink.color as keyof typeof colorClasses] || colorClasses.default;
                     return (
                         <Card key={drink.name} className={`bg-card/70 backdrop-blur-sm border-2 border-transparent group transition-all duration-300 ${colorClass}`}>
                             <CardHeader>
@@ -284,7 +284,6 @@ export function MenuSection() {
                                 {drink.icon && <drink.icon className="w-8 h-8 opacity-70 mb-2" />}
                                 {drink.description && <p className="text-muted-foreground text-sm">{drink.description}</p>}
                             </div>
-                            {drink.note && <p className="text-accent/80 text-xs mt-4 font-semibold">{drink.note}</p>}
                           </CardContent>
                         </Card>
                     )
@@ -299,7 +298,7 @@ export function MenuSection() {
            <div className="space-y-12">
             {Object.entries(alimentos).map(([category, items]) => (
               <div key={category}>
-                <h3 className="text-4xl md:text-5xl font-headline tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 text-glow mb-6">{category}</h3>
+                <h3 className="text-4xl md:text-5xl font-headline tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 text-glow-primary mb-6">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {items.map((item) => (
                     <Card key={item.name} className="bg-card border border-border/30">

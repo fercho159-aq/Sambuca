@@ -83,7 +83,10 @@
   .text-glow {
     text-shadow:
       0 0 5px currentColor,
-      0 0 10px currentColor;
+      0 0 10px currentColor,
+      0 0 20px hsl(var(--primary)),
+      0 0 30px hsl(var(--primary)),
+      0 0 40px hsl(var(--primary));
   }
   
   .box-glow {
@@ -96,6 +99,11 @@
 
   .box-glow-accent {
     box-shadow: 0 0 8px hsl(var(--accent)), 0 0 15px hsl(var(--accent));
+  }
+  
+  .text-glow-primary {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.8), 0 0 15px hsl(var(--primary) / 0.5);
   }
 
   .text-neon-pink {
