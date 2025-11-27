@@ -4,6 +4,7 @@ import { Header } from "@/components/landing/header";
 import { Footer } from "@/components/landing/footer";
 import { LocationsSection } from "@/components/landing/locations-section";
 import { HeroCarousel } from "@/components/landing/hero-carousel";
+import { GallerySection } from "@/components/landing/gallery-section";
 
 export default function Home() {
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroCarousel />
+        <GallerySection />
         <LocationsSection />
       </main>
       <Footer />

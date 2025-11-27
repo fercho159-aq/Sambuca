@@ -17,6 +17,54 @@
       "description": "People dancing in a club",
       "imageUrl": "https://images.unsplash.com/photo-1593958812614-2db6a598c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbHViJTIwcGFydHl8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "club party"
+    },
+    {
+      "id": "gallery1",
+      "description": "A person holding a vibrant pink cocktail with a neon light in the background.",
+      "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23eda2c5a5?q=80&w=1974&auto=format&fit=crop",
+      "imageHint": "neon cocktail"
+    },
+    {
+      "id": "gallery2",
+      "description": "A group of friends laughing and cheering with drinks at a bar.",
+      "imageUrl": "https://images.unsplash.com/photo-1517422638356-aaa9a29a099a?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "bar friends"
+    },
+    {
+      "id": "gallery3",
+      "description": "A close-up of a blue cocktail with a lime garnish, glowing under blue light.",
+      "imageUrl": "https://images.unsplash.com/photo-1609584871988-6134df3b3f2f?q=80&w=1974&auto=format&fit=crop",
+      "imageHint": "blue cocktail"
+    },
+    {
+      "id": "gallery4",
+      "description": "A DJ's hands on a mixer with a lively crowd dancing in the background.",
+      "imageUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "DJ party"
+    },
+    {
+      "id": "gallery5",
+      "description": "A neon sign that says 'Good Vibes Only' illuminating a brick wall.",
+      "imageUrl": "https://images.unsplash.com/photo-1534888373418-e36a4a4980a3?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "neon sign"
+    },
+    {
+      "id": "gallery6",
+      "description": "Two people clinking cocktail glasses in a toast at a dimly lit bar.",
+      "imageUrl": "https://images.unsplash.com/photo-1620835949007-7422a57969a5?q=80&w=1974&auto=format&fit=crop",
+      "imageHint": "bar toast"
+    },
+    {
+      "id": "gallery7",
+      "description": "A delicious-looking plate of bar food, like wings or nachos, under warm light.",
+      "imageUrl": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=1974&auto=format&fit=crop",
+      "imageHint": "bar food"
+    },
+    {
+      "id": "gallery8",
+      "description": "The interior of a bar with people sitting at tables, with a vibrant, energetic atmosphere.",
+      "imageUrl": "https://images.unsplash.com/photo-1574351340155-a18c69a7b900?q=80&w=1964&auto=format&fit=crop",
+      "imageHint": "bar atmosphere"
     }
   ]
 }
