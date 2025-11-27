@@ -111,12 +111,12 @@ export function HeroCarousel() {
                         <span className="text-neon-blue text-glow">PROMOS DE {dayName.toUpperCase()}</span>
                     </h2>
                     <h1 className={cn("font-black tracking-tighter uppercase mb-2", titleSizeClass)}>
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 drop-shadow-[0_0_30px_rgba(255,0,110,0.5)]">
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 drop-shadow-[0_0_15px_rgba(255,0,110,0.6)]">
                         {promo.title}
                         </span>
                     </h1>
 
-                    <p className="font-mono text-5xl md:text-6xl text-neon-yellow text-glow drop-shadow-[0_0_10px_rgba(255,234,0,0.8)] mb-6">
+                    <p className="font-mono text-5xl md:text-6xl text-neon-yellow text-glow mb-6">
                         {promo.price}
                     </p>
                     
