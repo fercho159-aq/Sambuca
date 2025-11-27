@@ -10,6 +10,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel"
+import { cn } from "@/lib/utils"
 
 const promotions = {
   0: [ // Domingo
@@ -82,6 +83,9 @@ export function HeroCarousel() {
         <CarouselContent className="h-screen ml-0">
           {todaysPromos.map((promo, index) => {
             const image = PlaceHolderImages.find(img => img.id === promo.imageId) || PlaceHolderImages[0];
+            const titleLength = promo.title.length;
+            const titleSizeClass = titleLength > 20 ? 'text-5xl md:text-7xl lg:text-8xl' : 'text-6xl md:text-8xl lg:text-9xl';
+
             return (
               <CarouselItem key={index} className="h-screen pl-0">
                 <div className="w-full h-full relative">
@@ -106,7 +110,7 @@ export function HeroCarousel() {
                     <h2 className="text-4xl md:text-5xl font-headline uppercase tracking-widest mb-4">
                         <span className="text-neon-blue text-glow">PROMOS DE {dayName.toUpperCase()}</span>
                     </h2>
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase mb-2">
+                    <h1 className={cn("font-black tracking-tighter uppercase mb-2", titleSizeClass)}>
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 drop-shadow-[0_0_30px_rgba(255,0,110,0.5)]">
                         {promo.title}
                         </span>
