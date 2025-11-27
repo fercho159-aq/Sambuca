@@ -5,7 +5,7 @@ const galleryImages = [
     {
       "id": "gallery1",
       "description": "A person holding a vibrant pink cocktail with a neon light in the background.",
-      "imageUrl": "/images/pato-shot.jpg",
+      "imageUrl": "/images/DSC05244.JPG",
       "imageHint": "neon cocktail"
     },
     {
@@ -17,7 +17,7 @@ const galleryImages = [
     {
       "id": "gallery3",
       "description": "A close-up of a blue cocktail with a lime garnish, glowing under blue light.",
-      "imageUrl": "/images/DSC05226.JPG",
+      "imageUrl": "/images/DSC04488 (1).JPG",
       "imageHint": "blue cocktail"
     },
     {
@@ -41,7 +41,7 @@ const galleryImages = [
     {
       "id": "gallery7",
       "description": "A delicious-looking plate of bar food, like wings or nachos, under warm light.",
-      "imageUrl": "/images/DSC04488.JPG",
+      "imageUrl": "/images/DSC05226.JPG",
       "imageHint": "bar food"
     },
     {
@@ -71,35 +71,35 @@ export function GallerySection() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="grid gap-4">
-            <div className="relative rounded-xl overflow-hidden aspect-[4/3] box-glow-primary group">
-              <Image src={galleryImages[0].imageUrl} alt={galleryImages[0].description} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={galleryImages[0].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
+            <div className="relative rounded-xl overflow-hidden box-glow-primary group">
+              <Image src={galleryImages[0].imageUrl} alt={galleryImages[0].description} width={600} height={400} className="object-cover group-hover:scale-105 transition-transform duration-300 h-full w-full" data-ai-hint={galleryImages[0].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
-            <div className="relative rounded-xl overflow-hidden aspect-square box-glow-accent group">
-               <Image src={galleryImages[1].imageUrl} alt={galleryImages[1].description} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={galleryImages[1].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
-            </div>
-          </div>
-          <div className="grid gap-4">
-            <div className="relative rounded-xl overflow-hidden aspect-square box-glow-accent group">
-               <Image src={galleryImages[2].imageUrl} alt={galleryImages[2].description} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={galleryImages[2].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
-            </div>
-             <div className="relative rounded-xl overflow-hidden aspect-[4/3] box-glow-primary group">
-              <Image src={galleryImages[3].imageUrl} alt={galleryImages[3].description} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={galleryImages[3].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
+            <div className="relative rounded-xl overflow-hidden box-glow-accent group">
+               <Image src={galleryImages[1].imageUrl} alt={galleryImages[1].description} width={600} height={600} className="object-cover group-hover:scale-105 transition-transform duration-300 h-full w-full" data-ai-hint={galleryImages[1].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
           </div>
           <div className="grid gap-4">
-            <div className="relative rounded-xl overflow-hidden aspect-[4/3] box-glow-primary group">
-              <Image src={galleryImages[4].imageUrl} alt={galleryImages[4].description} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={galleryImages[4].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
+            <div className="relative rounded-xl overflow-hidden box-glow-accent group">
+               <Image src={galleryImages[2].imageUrl} alt={galleryImages[2].description} width={600} height={600} className="object-cover group-hover:scale-105 transition-transform duration-300 h-full w-full" data-ai-hint={galleryImages[2].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
-            <div className="relative rounded-xl overflow-hidden aspect-square box-glow-accent group">
-              <Image src={galleryImages[5].imageUrl} alt={galleryImages[5].description} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={galleryImages[5].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
+             <div className="relative rounded-xl overflow-hidden box-glow-primary group">
+              <Image src={galleryImages[3].imageUrl} alt={galleryImages[3].description} width={600} height={400} className="object-cover group-hover:scale-105 transition-transform duration-300 h-full w-full" data-ai-hint={galleryImages[3].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div className="relative rounded-xl overflow-hidden box-glow-primary group">
+              <Image src={galleryImages[4].imageUrl} alt={galleryImages[4].description} width={600} height={400} className="object-cover group-hover:scale-105 transition-transform duration-300 h-full w-full" data-ai-hint={galleryImages[4].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="relative rounded-xl overflow-hidden box-glow-accent group">
+              <Image src={galleryImages[5].imageUrl} alt={galleryImages[5].description} width={600} height={600} className="object-cover group-hover:scale-105 transition-transform duration-300 h-full w-full" data-ai-hint={galleryImages[5].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
           </div>
            <div className="grid gap-4">
-            <div className="relative rounded-xl overflow-hidden aspect-square box-glow-accent group">
-              <Image src={galleryImages[6].imageUrl} alt={galleryImages[6].description} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={galleryImages[6].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
+            <div className="relative rounded-xl overflow-hidden box-glow-accent group">
+              <Image src={galleryImages[6].imageUrl} alt={galleryImages[6].description} width={600} height={600} className="object-cover group-hover:scale-105 transition-transform duration-300 h-full w-full" data-ai-hint={galleryImages[6].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
-             <div className="relative rounded-xl overflow-hidden aspect-[4/3] box-glow-primary group">
-              <Image src={galleryImages[7].imageUrl} alt={galleryImages[7].description} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={galleryImages[7].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
+             <div className="relative rounded-xl overflow-hidden box-glow-primary group">
+              <Image src={galleryImages[7].imageUrl} alt={galleryImages[7].description} width={600} height={400} className="object-cover group-hover:scale-105 transition-transform duration-300 h-full w-full" data-ai-hint={galleryImages[7].imageHint} sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
           </div>
         </div>
