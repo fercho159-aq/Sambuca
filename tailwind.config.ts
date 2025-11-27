@@ -13,6 +13,8 @@ export default {
         'neon-pink': 'hsl(var(--neon-pink))',
         'neon-green': 'hsl(var(--neon-green))',
         'neon-blue': 'hsl(var(--neon-blue))',
+        'neon-yellow': 'hsl(var(--neon-yellow))',
+        'neon-orange': 'hsl(var(--neon-orange))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
