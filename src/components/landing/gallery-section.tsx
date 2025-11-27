@@ -47,7 +47,7 @@ const galleryImages = [
     {
       "id": "gallery8",
       "description": "The interior of a bar with people sitting at tables, with a vibrant, energetic atmosphere.",
-      "imageUrl": "/images/DSC05341.JPG",
+      "imageUrl": "/images/DSC05339.JPG",
       "imageHint": "bar atmosphere"
     }
   ];
