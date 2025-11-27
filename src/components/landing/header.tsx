@@ -91,7 +91,7 @@ export function Header() {
               <Link href="/">
                 <div className="relative h-16 w-56 mb-8">
                   <Image
-                    src="/images/logo sambuca.pn"
+                    src="/images/logo sambuca.png"
                     alt="Sambuca Logo"
                     fill
                     className="object-contain"
