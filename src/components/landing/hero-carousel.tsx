@@ -4,7 +4,7 @@ import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
 import Link from "next/link"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
+import { PlaceHolderImages, type ImagePlaceholder } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 
 import {
@@ -12,39 +12,54 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel"
+import { Skeleton } from "../ui/skeleton"
 
 export function HeroCarousel() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
-  )
+  );
+  
+  const [slides, setSlides] = React.useState<any[]>([]);
+  const [loading, setLoading] = React.useState(true);
 
-  const slides = [
-    {
-      image: PlaceHolderImages.find(img => img.id === 'hero1'),
-      title: "ENCIENDE",
-      subtitle: "LA FIESTA",
-      cta: "VER MENÚ",
-      ctaLink: "/menu",
-      highlight: "Tritones",
-    },
-    {
-      image: PlaceHolderImages.find(img => img.id === 'hero2'),
-      title: "SABOR",
-      subtitle: "EXPLOSIVO",
-      cta: "PROMOCIONES",
-      ctaLink: "#promos",
-      highlight: "Patitos",
-    },
-    {
-      image: PlaceHolderImages.find(img => img.id === 'hero3'),
-      title: "NOCHES",
-      subtitle: "INOLVIDABLES",
-      cta: "RESERVAR",
-      ctaLink: "/reservar",
-      highlight: "Neón",
-    },
-  ]
+  React.useEffect(() => {
+    const slideData = [
+       {
+        image: PlaceHolderImages.find(img => img.id === 'hero1'),
+        title: "ENCIENDE",
+        subtitle: "LA FIESTA",
+        cta: "VER MENÚ",
+        ctaLink: "/menu",
+        highlight: "Tritones",
+      },
+      {
+        image: PlaceHolderImages.find(img => img.id === 'hero2'),
+        title: "SABOR",
+        subtitle: "EXPLOSIVO",
+        cta: "PROMOCIONES",
+        ctaLink: "#promos",
+        highlight: "Patitos",
+      },
+      {
+        image: PlaceHolderImages.find(img => img.id === 'hero3'),
+        title: "NOCHES",
+        subtitle: "INOLVIDABLES",
+        cta: "RESERVAR",
+        ctaLink: "/reservar",
+        highlight: "Neón",
+      },
+    ];
+    setSlides(slideData);
+    setLoading(false);
+  }, []);
 
+  if (loading) {
+    return (
+       <section className="relative h-screen w-full overflow-hidden bg-black flex items-center justify-center">
+         <p className="text-white text-glow animate-pulse text-2xl font-headline">Cargando...</p>
+      </section>
+    )
+  }
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
