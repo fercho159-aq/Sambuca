@@ -4,7 +4,7 @@ import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
 import Link from "next/link"
-import { PlaceHolderImages, type ImagePlaceholder } from "@/lib/placeholder-images"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 
 import {
