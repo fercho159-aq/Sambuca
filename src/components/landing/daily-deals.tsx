@@ -53,7 +53,7 @@ export function DailyDeals() {
         );
     }
 
-    const todaysPromos = promotions[currentDay] || [];
+    const todaysPromos = promotions[currentDay as keyof typeof promotions] || [];
     const dayName = dayNames[currentDay];
 
   return (
