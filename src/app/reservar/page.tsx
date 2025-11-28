@@ -15,12 +15,6 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Reservaciones",
-  description: "Asegura tu lugar en Sambuca. Reserva fácilmente en nuestras sucursales de San Ángel, Roma, Copilco o Cuauhtémoc para una noche inolvidable.",
-};
 
 export default function ReservarPage() {
   const { toast } = useToast();
