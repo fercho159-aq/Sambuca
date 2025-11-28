@@ -26,7 +26,7 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="relative aspect-square rounded-lg overflow-hidden box-glow-primary">
                <Image
-                src="/images/pato-shot.jpg"
+                src="/images/pato shot.jpg"
                 alt="Interior del bar Sambuca con luces de neón"
                 fill
                 className="object-cover"
