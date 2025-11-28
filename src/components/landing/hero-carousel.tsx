@@ -13,35 +13,35 @@ import { cn } from "@/lib/utils"
 
 const promotions = {
   0: [ // Domingo
-    { title: "Tritón de 4.8 Litros", price: "$349", description: "De VODKA PREPARADOS, CERVEZA o NEON", imageUrl: "https://images.unsplash.com/photo-1631058269796-6ea2654cc78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjM5NTI5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "neon sign" },
-    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "https://images.unsplash.com/photo-1647776111151-8a2257dbbc8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2NrdGFpbHMlMjBiYXJ8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "cocktails bar" },
+    { title: "Tritón de 4.8 Litros", price: "$349", description: "De VODKA PREPARADOS, CERVEZA o NEON", imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
   ],
   1: [ // Lunes
-    { title: "Charola", price: "$650", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "https://images.unsplash.com/photo-1647776111151-8a2257dbbc8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2NrdGFpbHMlMjBiYXJ8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "cocktails bar" },
-    { title: "Copas de 1L 2x1", price: "2x1", description: "Sambulocas, Mojitos", imageUrl: "https://images.unsplash.com/photo-1593958812614-2db6a598c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbHViJTIwcGFydHl8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "club party" },
-    { title: "Tritón de 4.8 Litros", price: "$349", description: "De VODKA PREPARADOS, CERVEZA o NEON", imageUrl: "https://images.unsplash.com/photo-1631058269796-6ea2654cc78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjM5NTI5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "neon sign" },
+    { title: "Charola", price: "$650", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "Copas de 1L 2x1", price: "2x1", description: "Sambulocas, Mojitos", imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
+    { title: "Tritón de 4.8 Litros", price: "$349", description: "De VODKA PREPARADOS, CERVEZA o NEON", imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ],
   2: [ // Martes
-    { title: "Charola", price: "$650", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "https://images.unsplash.com/photo-1647776111151-8a2257dbbc8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2NrdGFpbHMlMjBiYXJ8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "cocktails bar" },
-    { title: "Tritón de 4.8 Litros", price: "$349", description: "De VODKA PREPARADOS, CERVEZA o NEON", imageUrl: "https://images.unsplash.com/photo-1631058269796-6ea2654cc78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjM5NTI5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "neon sign" },
+    { title: "Charola", price: "$650", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "Tritón de 4.8 Litros", price: "$349", description: "De VODKA PREPARADOS, CERVEZA o NEON", imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ],
   3: [ // Miércoles
-    { title: "Charola", price: "$650", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "https://images.unsplash.com/photo-1647776111151-8a225Tdbbc8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2NrdGFpbHMlMjBiYXJ8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "cocktails bar" },
-    { title: "Tritón + Alipapas", price: "$349", description: "En la compra del primer tritón, llévate una orden de Alipapas.", imageUrl: "https://images.unsplash.com/photo-1631058269796-6ea2654cc78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjM5NTI5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "neon sign" },
-    { title: "Frappes y Copas 1L 2x1", price: "2x1", description: "De Chela, Sky, Caribe Cooler.", imageUrl: "https://images.unsplash.com/photo-1593958812614-2db6a598c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbHViJTIwcGFydHl8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "club party" },
+    { title: "Charola", price: "$650", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "Tritón + Alipapas", price: "$349", description: "En la compra del primer tritón, llévate una orden de Alipapas.", imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "Frappes y Copas 1L 2x1", price: "2x1", description: "De Chela, Sky, Caribe Cooler.", imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
   ],
   4: [ // Jueves
-    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "https://images.unsplash.com/photo-1647776111151-8a2257dbbc8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2NrdGFpbHMlMjBiYXJ8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "cocktails bar" },
-    { title: "Copas de 1L 2x1", price: "2x1", description: "Sambulocas, Mojitos", imageUrl: "https://images.unsplash.com/photo-1593958812614-2db6a598c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbHViJTIwcGFydHl8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "club party" },
-    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: "4.8 Litros", imageUrl: "https://images.unsplash.com/photo-1631058269796-6ea2654cc78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjM5NTI5NDV8MA&ixlibrb-4.1.0&q=80&w=1080", imageHint: "neon sign" },
+    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "Copas de 1L 2x1", price: "2x1", description: "Sambulocas, Mojitos", imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
+    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: "4.8 Litros", imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ],
   5: [ // Viernes
-    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORden de 6 ALITAS + PAPAS", imageUrl: "https://images.unsplash.com/photo-1647776111151-8a2257dbbc8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2NrdGFpbHMlMjBiYXJ8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "cocktails bar" },
-    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: "4.8 Litros", imageUrl: "https://images.unsplash.com/photo-1631058269796-6ea2654cc78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjM5NTI5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "neon sign" },
+    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN de 6 ALITAS + PAPAS", imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: "4.8 Litros", imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ],
   6: [ // Sábado
-    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "https://images.unsplash.com/photo-1647776111151-8a2257dbbc8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2NrdGFpbHMlMjBiYXJ8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "cocktails bar" },
-    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: "4.8 Litros", imageUrl: "https://images.unsplash.com/photo-1631058269796-6ea2654cc78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjM5NTI5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080", imageHint: "neon sign" },
+    { title: "Charola", price: "$850", description: "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS + PAPAS", imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: "4.8 Litros", imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ]
 };
 
