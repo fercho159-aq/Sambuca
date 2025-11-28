@@ -28,7 +28,7 @@ const promotions = {
   ],
   3: [ // Miércoles
     { title: "Charola", price: "$650", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
-    { title: "Tritón + Alipapas", price: "$349", description: ["En la compra del primer tritón, llévate una orden de Alipapas."], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "Tritón + Alipapas", price: "$349", description: ["En la compra del primer tritón,", "llévate una orden de Alipapas."], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
     { title: "Frappes y Copas 1L 2x1", price: "2x1", description: ["De Chela, Sky, Caribe Cooler."], imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
   ],
   4: [ // Jueves
@@ -124,7 +124,8 @@ export function HeroCarousel() {
                     
                     <div className="mt-2 text-lg md:text-xl lg:text-2xl font-light max-w-3xl drop-shadow-lg space-y-2">
                       {promo.description.map((item, itemIndex) => {
-                        const Icon = promo.description.length > 1 ? descriptionIcons[itemIndex % descriptionIcons.length] : null;
+                        const isCharola = promo.title.toLowerCase().includes('charola');
+                        const Icon = isCharola ? descriptionIcons[itemIndex % descriptionIcons.length] : null;
                         return (
                           <div key={itemIndex} className="flex items-center justify-center gap-3">
                             {Icon && <Icon className="h-6 w-6 text-neon-yellow" />}
