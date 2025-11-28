@@ -10,7 +10,7 @@ import { Bomb, GlassWater, Beer } from "lucide-react";
 import { DuckIcon } from "../icons/duck-icon";
 import { BottleIcon } from "../icons/bottle-icon";
 import { PizzaIcon } from "../icons/pizza-icon";
-import { SaladIcon } from "../icons/salad-icon";
+import { SnackIcon } from "../icons/snack-icon";
 
 const paquetes = [
   {
@@ -184,8 +184,8 @@ const alimentos = {
         { name: "Salchipulpos (6 pz) + Papas", price: "$60", icon: PizzaIcon },
     ],
     "Platillos": [
-        { name: "Alambres en comal (Pollo o Arrachera)", price: "$220", icon: SaladIcon },
-        { name: "Mole (Poblano, Negro, Verde)", price: "$120 - $140", description: "Con pechuga o pierna de pollo", icon: SaladIcon },
+        { name: "Alambres en comal (Pollo o Arrachera)", price: "$220", icon: SnackIcon },
+        { name: "Mole (Poblano, Negro, Verde)", price: "$120 - $140", description: "Con pechuga o pierna de pollo", icon: SnackIcon },
     ],
     "Postres": [
         { name: "Churros", price: "4 pzs por $50, 8 por $80, 12 por $110" },

@@ -3,7 +3,8 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
-import { Beer, Drumstick, Beef } from 'lucide-react';
+import { Beer, Drumstick } from 'lucide-react';
+import { SnackIcon } from "../icons/snack-icon";
 
 import {
   Carousel,
@@ -46,7 +47,7 @@ const promotions = {
   ]
 };
 
-const descriptionIcons = [Beer, Drumstick, Beef];
+const descriptionIcons = [Beer, Drumstick, SnackIcon];
 
 const dayNames = ["DOMINGO", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO"];
 
