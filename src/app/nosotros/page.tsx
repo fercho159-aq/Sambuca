@@ -1,6 +1,12 @@
 import { Header } from "@/components/landing/header";
 import { Footer } from "@/components/landing/footer";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nuestra Historia",
+  description: "Conoce la historia de Sambuca Bar. Nacimos para revolucionar las noches de CDMX con un ambiente neón y coctelería de autor.",
+};
 
 export default function NosotrosPage() {
   return (
@@ -21,7 +27,7 @@ export default function NosotrosPage() {
             <div className="relative aspect-square rounded-lg overflow-hidden box-glow-primary">
                <Image
                 src="/images/pato-shot.jpg"
-                alt="Interior del bar Sambuca"
+                alt="Interior del bar Sambuca con luces de neón"
                 fill
                 className="object-cover"
                 data-ai-hint="neon bar"
