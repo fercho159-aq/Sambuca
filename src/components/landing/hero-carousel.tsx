@@ -3,8 +3,8 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
-import { Beer, Drumstick, Pizza } from 'lucide-react';
-import { SnackIcon } from "../icons/snack-icon";
+import { Beer, Drumstick } from 'lucide-react';
+import { CiFries } from "react-icons/ci";
 
 import {
   Carousel,
@@ -47,7 +47,6 @@ const promotions = {
   ]
 };
 
-const descriptionIcons = [Beer, Drumstick, Pizza];
 
 const dayNames = ["DOMINGO", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO"];
 
@@ -125,11 +124,16 @@ export function HeroCarousel() {
                     
                     <div className="mt-2 text-lg md:text-xl lg:text-2xl font-light max-w-3xl drop-shadow-lg space-y-2">
                       {promo.description.map((item, itemIndex) => {
-                        const lowerCaseTitle = promo.title.toLowerCase();
+                        const lowerCaseItem = item.toLowerCase();
                         let Icon = null;
-                        if (lowerCaseTitle.includes('charola')) {
-                            Icon = descriptionIcons[itemIndex % descriptionIcons.length];
-                        } else if (lowerCaseTitle.includes('tritón')) {
+
+                        if (lowerCaseItem.includes('cerveza')) {
+                            Icon = Beer;
+                        } else if (lowerCaseItem.includes('alitas')) {
+                            Icon = Drumstick;
+                        } else if (lowerCaseItem.includes('papas')) {
+                            Icon = CiFries;
+                        } else if (promo.title.toLowerCase().includes('tritón')) {
                             Icon = Beer;
                         }
                         
