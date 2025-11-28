@@ -124,8 +124,14 @@ export function HeroCarousel() {
                     
                     <div className="mt-2 text-lg md:text-xl lg:text-2xl font-light max-w-3xl drop-shadow-lg space-y-2">
                       {promo.description.map((item, itemIndex) => {
-                        const isCharola = promo.title.toLowerCase().includes('charola');
-                        const Icon = isCharola ? descriptionIcons[itemIndex % descriptionIcons.length] : null;
+                        const lowerCaseTitle = promo.title.toLowerCase();
+                        let Icon = null;
+                        if (lowerCaseTitle.includes('charola')) {
+                            Icon = descriptionIcons[itemIndex % descriptionIcons.length];
+                        } else if (lowerCaseTitle.includes('tritón')) {
+                            Icon = Beer;
+                        }
+                        
                         return (
                           <div key={itemIndex} className="flex items-center justify-center gap-3">
                             {Icon && <Icon className="h-6 w-6 text-neon-yellow" />}
