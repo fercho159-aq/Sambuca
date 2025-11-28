@@ -14,41 +14,41 @@ import { cn } from "@/lib/utils"
 
 const promotions = {
   0: [ // Domingo
-    { title: "Tritón de 4.8 Litros", price: "$349", description: ["DE VODKA PREPARADOS, CERVEZA O NEON"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
-    { title: "Charola", price: "$850", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "TRITÓN DE 4.8 LITROS", price: "$349", description: ["DE VODKA PREPARADOS, CERVEZA O NEON"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "CHAROLA", price: "$850", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
   ],
   1: [ // Lunes
-    { title: "Charola", price: "$650", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
-    { title: "Copas de 1L 2x1", price: "2x1", description: ["SAMBULOCAS, MOJITOS"], imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
-    { title: "Tritón de 4.8 Litros", price: "$349", description: ["DE VODKA PREPARADOS, CERVEZA O NEON"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "CHAROLA", price: "$650", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "COPAS DE 1L 2X1", price: "2X1", description: ["SAMBULOCAS, MOJITOS"], imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
+    { title: "TRITÓN DE 4.8 LITROS", price: "$349", description: ["DE VODKA PREPARADOS, CERVEZA O NEON"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ],
   2: [ // Martes
-    { title: "Charola", price: "$650", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
-    { title: "Tritón de 4.8 Litros", price: "$349", description: ["DE VODKA PREPARADOS, CERVEZA O NEON"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "CHAROLA", price: "$650", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "TRITÓN DE 4.8 LITROS", price: "$349", description: ["DE VODKA PREPARADOS, CERVEZA O NEON"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ],
   3: [ // Miércoles
-    { title: "Charola", price: "$650", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
-    { title: "Tritón + Alipapas", price: "$349", description: ["EN LA COMPRA DEL PRIMER TRITÓN,", "LLÉVATE UNA ORDEN DE ALIPAPAS."], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
-    { title: "Frappes y Copas 1L 2x1", price: "2x1", description: ["DE CHELA, SKY, CARIBE COOLER."], imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
+    { title: "CHAROLA", price: "$650", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "TRITÓN + ALIPAPAS", price: "$349", description: ["EN LA COMPRA DEL PRIMER TRITÓN,", "LLÉVATE UNA ORDEN DE ALIPAPAS."], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "FRAPPES Y COPAS 1L 2X1", price: "2X1", description: ["DE CHELA, SKY, CARIBE COOLER."], imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
   ],
   4: [ // Jueves
-    { title: "Charola", price: "$850", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
-    { title: "Copas de 1L 2x1", price: "2x1", description: ["SAMBULOCAS, MOJITOS"], imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
-    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: ["4.8 LITROS"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "CHAROLA", price: "$850", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "COPAS DE 1L 2X1", price: "2X1", description: ["SAMBULOCAS, MOJITOS"], imageUrl: "/images/DSC05245.JPG", imageHint: "club party" },
+    { title: "TRITÓN CERVEZA/NEON/VODKA", price: "$399", description: ["4.8 LITROS"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ],
   5: [ // Viernes
-    { title: "Charola", price: "$850", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
-    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: ["4.8 LITROS"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "CHAROLA", price: "$850", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "TRITÓN CERVEZA/NEON/VODKA", price: "$399", description: ["4.8 LITROS"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ],
   6: [ // Sábado
-    { title: "Charola", price: "$850", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
-    { title: "Tritón Cerveza/Neon/Vodka", price: "$399", description: ["4.8 LITROS"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
+    { title: "CHAROLA", price: "$850", description: ["24 LATAS DE CERVEZA 355 ML.", "1 ORDEN DE 6 ALITAS", "PAPAS"], imageUrl: "/images/DSC05226.JPG", imageHint: "cocktails bar" },
+    { title: "TRITÓN CERVEZA/NEON/VODKA", price: "$399", description: ["4.8 LITROS"], imageUrl: "/images/pato-shot.jpg", imageHint: "neon sign" },
   ]
 };
 
 const descriptionIcons = [Beer, Drumstick, Beef];
 
-const dayNames = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+const dayNames = ["DOMINGO", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO"];
 
 export function HeroCarousel() {
   const plugin = React.useRef(
@@ -66,7 +66,7 @@ export function HeroCarousel() {
   if (!todaysPromos || !dayName) {
     return (
       <section className="relative h-screen w-full overflow-hidden bg-black flex items-center justify-center">
-        <h2 className="text-4xl font-headline tracking-widest text-neon-pink text-glow animate-pulse">Cargando promos...</h2>
+        <h2 className="text-4xl font-headline tracking-widest text-neon-pink text-glow animate-pulse">CARGANDO PROMOS...</h2>
       </section>
     );
   }
