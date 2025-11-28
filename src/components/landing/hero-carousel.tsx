@@ -3,7 +3,7 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
-import { Beer, Drumstick } from 'lucide-react';
+import { Beer, Drumstick, Pizza } from 'lucide-react';
 import { SnackIcon } from "../icons/snack-icon";
 
 import {
@@ -47,7 +47,7 @@ const promotions = {
   ]
 };
 
-const descriptionIcons = [Beer, Drumstick, SnackIcon];
+const descriptionIcons = [Beer, Drumstick, Pizza];
 
 const dayNames = ["DOMINGO", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO"];
 
@@ -55,7 +55,7 @@ export function HeroCarousel() {
   const plugin = React.useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   )
-  const [todaysPromos, setTodaysPromos] = React.useState<typeof promotions[0] | null>(null);
+  const [todaysPromos, setTodaysPromos] = React.useState<(typeof promotions)[0] | null>(null);
   const [dayName, setDayName] = React.useState<string | null>(null);
 
   React.useEffect(() => {
