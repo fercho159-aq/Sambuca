@@ -1,6 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { query, initPrizeTable } from '@/lib/db';
+import { query, queryOne, initPrizeTable } from '@/lib/db';
 import { selectPrize, generateCode, PRIZES } from '@/lib/prizes';
+
+interface PrizeEntry {
+  id: number;
+  nombre: string;
+  telefono: string;
+  premio_id: string;
+  premio_nombre: string;
+  codigo_redencion: string;
+  status: string;
+  created_at: Date;
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,6 +27,31 @@ export async function POST(request: NextRequest) {
 
     // Initialize table if it doesn't exist
     await initPrizeTable();
+
+    // Check if phone has already played today
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const existingEntry = await queryOne<PrizeEntry>(
+      `SELECT * FROM prize_entries
+       WHERE telefono = $1
+       AND created_at >= $2`,
+      [telefono, today.toISOString()]
+    );
+
+    if (existingEntry) {
+      return NextResponse.json(
+        {
+          error: 'Ya participaste hoy. Vuelve mañana para otra oportunidad.',
+          alreadyPlayed: true,
+          existingPrize: {
+            nombre: existingEntry.premio_nombre,
+            codigo: existingEntry.codigo_redencion,
+          }
+        },
+        { status: 400 }
+      );
+    }
 
     // Select prize and generate code
     const prize = selectPrize();
