@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     "Cocteles",
     "Promociones",
     "San Ángel",
-    "Roma",
     "Copilco",
     "Cuauhtémoc",
   ],

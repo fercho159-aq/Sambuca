@@ -1,6 +1,6 @@
 "use client";
 
-import { Instagram } from 'lucide-react';
+import { Instagram, Facebook } from 'lucide-react';
 import Image from 'next/image';
 
 function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -40,7 +40,8 @@ export function Footer() {
                 </div>
                 <div className="flex space-x-6">
                     <a href="https://www.instagram.com/bar_sambuca/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors"><Instagram size={24} /></a>
-                    <a href="https://www.tiktok.com/@bar_sambuca_cdmx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><TikTokIcon className="h-6 w-6" /></a> 
+                    <a href="https://www.facebook.com/sambucasanangel" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors"><Facebook size={24} /></a>
+                    <a href="https://www.tiktok.com/@bar_sambuca_cdmx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><TikTokIcon className="h-6 w-6" /></a>
                 </div>
             </div>
         </footer>

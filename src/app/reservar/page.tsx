@@ -65,7 +65,6 @@ export default function ReservarPage() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="san-angel">Sambuca San Ángel</SelectItem>
-                    <SelectItem value="roma">Sambuca Roma</SelectItem>
                     <SelectItem value="copilco">Sambuca Copilco</SelectItem>
                     <SelectItem value="cuauhtemoc">Sambuca Cuauhtémoc</SelectItem>
                   </SelectContent>

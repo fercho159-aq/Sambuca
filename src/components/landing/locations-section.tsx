@@ -3,19 +3,12 @@
 import { MapPin, Clock, Facebook, PartyPopper } from "lucide-react";
 
 const branches = [
-    { 
-        name: "Bar Sambuca San Ángel", 
-        address: "Rio de la Magdalena 38, Tizapán San Ángel, Álvaro Obregón, 01000 CDMX", 
+    {
+        name: "Bar Sambuca San Ángel",
+        address: "Rio de la Magdalena 38, Tizapán San Ángel, Álvaro Obregón, 01000 CDMX",
         hours: "Jue-Dom 6pm - 3am",
         mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.331238478744!2d-99.2015386889814!3d19.35479088190302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff8a5d3c8f7b%3A0x294187985473063!2sBar%20Sambuca%20San%20%C3%81ngel!5e0!3m2!1sen!2sus!4v1716921858368!5m2!1sen!2sus&output=embed",
         facebookUrl: "https://facebook.com/sambucasanangel"
-    },
-    { 
-        name: "Sambuca Roma", 
-        address: "Av. Yucatán 147, Roma Nte., Cuauhtémoc, 06700 CDMX", 
-        hours: "Mar-Dom 5pm - 2am",
-        mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.772393319034!2d-99.16770078897999!3d19.42232988185799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3b593414ab%3A0x1a459056f7336203!2sSambuca%20Roma!5e0!3m2!1sen!2sus!4v1716921915998!5m2!1sen!2sus&output=embed",
-        facebookUrl: "https://facebook.com/profile.php?id=100066643299654"
     },
     { 
         name: "Sambuca Copilco", 
