@@ -1,3 +1,7 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -11,6 +15,8 @@ import { DuckIcon } from "../icons/duck-icon";
 import { BottleIcon } from "../icons/bottle-icon";
 import { PizzaIcon } from "../icons/pizza-icon";
 import { SnackIcon } from "../icons/snack-icon";
+
+const VALID_TABS = ["promociones", "paquetes", "bebidas", "alimentos"] as const;
 
 const paquetes = [
   {
@@ -76,6 +82,7 @@ const promociones = [
         price: "$650",
         description:
           "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS BAÑADAS EN TU SALSA FAVORITA + PAPAS A LA FRANCESA",
+        image: "/images/menu/Charola de Cerveza con papas y alitas.png",
       },
     ],
   },
@@ -87,11 +94,13 @@ const promociones = [
         price: "$349",
         description:
           "En la compra del primer tritón, te enviamos una orden de Alipapas bañadas en tu salsa favorita.",
+        image: "/images/menu/Tritón 4.8L (Vodka o Cerveza) + Alipapas.png",
       },
       {
         title: "Frappes y Copas de 1 LT",
         price: "2x1",
         description: "De Chela, Sky, Caribe Cooler.",
+        image: "/images/menu/Sambulocas Mojitos.png",
       },
     ],
   },
@@ -102,6 +111,7 @@ const promociones = [
         title: "Copas de 1L",
         price: "2x1",
         description: "Sambulocas, Mojitos",
+        image: "/images/menu/Sambulocas Mojitos.png",
       },
     ],
   },
@@ -113,49 +123,50 @@ const promociones = [
         price: "$850",
         description:
           "+ 24 LATAS DE CERVEZA 355 ML. + 1 ORDEN DE 6 ALITAS BAÑADAS EN TU SALSA FAVORITA + PAPAS A LA FRANCESA",
+        image: "/images/menu/Charola de Cerveza con papas y alitas.png",
       },
     ],
   },
   {
     day: "Lunes, Martes, Miércoles y Domingo",
     deals: [
-        { title: "Tritón de 4.8 Litros", price: "$349", description: "De VODKA PREPARADOS, CERVEZA o NEON" },
+        { title: "Tritón de 4.8 Litros", price: "$349", description: "De VODKA PREPARADOS, CERVEZA o NEON", image: "/images/menu/Tritón Neón Rosa con botana.png" },
     ]
   },
   {
     day: "Jueves, Viernes y Sábado",
     deals: [
-        { title: "Tritón de Cerveza, Neon o Vodka", price: "$399", description: "4.8 Litros" },
+        { title: "Tritón de Cerveza, Neon o Vodka", price: "$399", description: "4.8 Litros", image: "/images/menu/Tritón Neón Rosa con botana.png" },
     ]
   },
   {
     day: "De Lunes a Domingo",
     deals: [
-        { title: "Tritón de 4.8 Litros", price: "$500", description: "De TEQUILA, RON o WHISKY" },
+        { title: "Tritón de 4.8 Litros", price: "$500", description: "De TEQUILA, RON o WHISKY", image: "/images/menu/Tritón 4.8L (Ron, Whisky, Tequila).png" },
     ]
   }
 ];
 
 const bebidas = {
   "Neon Drinks": [
-    { name: "Sencillas Litro", price: "$120", icon: GlassWater, description: "Yellow On, Orange On, Blue On, Pink On, Green On. No incluye mini botella.", color: "yellow" },
-    { name: "Con Patito", price: "$130", icon: DuckIcon, description: "Pink On, Green On, Blue On, Yellow On, Orange On. 'Enciende tu bebida'. Incluye patito de regalo.", color: "pink" },
+    { name: "Sencillas Litro", price: "$120", icon: GlassWater, description: "Yellow On, Orange On, Blue On, Pink On, Green On. No incluye mini botella.", color: "yellow", image: "/images/menu/Neon Drinks - 1L.png" },
+    { name: "Con Patito", price: "$130", icon: DuckIcon, description: "Pink On, Green On, Blue On, Yellow On, Orange On. 'Enciende tu bebida'. Incluye patito de regalo.", color: "pink", image: "/images/menu/Neon Drinks - Con Patito.png" },
     { name: "Especiales Litro", price: "$140", icon: BottleIcon, description: "Orange On, Yellow On, Green On, Pink On, Blue On. Incluye mini botella de regalo.", color: "blue" },
   ],
   "Micheladas": [
-    { name: "Micheladas Especiales", price: "$120", icon: Beer, description: "1.25L. Mango, Cereza, Gomitas, Cacahuates, Cueritos.", color: "yellow" },
+    { name: "Micheladas Especiales", price: "$120", icon: Beer, description: "1.25L. Mango, Cereza, Gomitas, Cacahuates, Cueritos.", color: "yellow", image: "/images/menu/Michelada Especial con gomitas.png" },
     { name: "Especial de Camarón", price: "$200", icon: Beer, description: "1Lt Chela + Camarón. Vaso escarchado especial.", color: "orange" },
   ],
   "Para Compartir (Sambupatos)": [
-    { name: "Baby Vodka (10 Shots)", price: "$300", icon: Bomb, description: "Mango, fresa, cereza, tamarindo, frutos rojos, y más.", color: "green" },
-    { name: "Skittles + Skyy (10 Shots)", price: "$300", icon: Bomb, description: "Incluye paquete de Skittles y botella Skyy.", color: "pink" },
-    { name: "Baileys (10 Shots)", price: "$450", icon: Bomb, color: "yellow" },
-    { name: "Perlas Negras (10 Shots)", price: "$450", icon: Bomb, description: "Opcional: con Boost o con Monster.", color: "blue" },
+    { name: "Baby Vodka (10 Shots)", price: "$300", icon: Bomb, description: "Mango, fresa, cereza, tamarindo, frutos rojos, y más.", color: "green", image: "/images/menu/Sambupatos - Baby Vodka (10 Shots).png" },
+    { name: "Skittles + Skyy (10 Shots)", price: "$300", icon: Bomb, description: "Incluye paquete de Skittles y botella Skyy.", color: "pink", image: "/images/menu/Sambupatos - Skittles + Skyy (10 Shots).png" },
+    { name: "Baileys (10 Shots)", price: "$450", icon: Bomb, color: "yellow", image: "/images/menu/Sambupatos - Baileys (10 Shots).png" },
+    { name: "Perlas Negras (10 Shots)", price: "$450", icon: Bomb, description: "Opcional: con Boost o con Monster.", color: "blue", image: "/images/menu/Sambupatos - Perlas Negras (10 Shots).png" },
   ],
   "Cervezas": [
-    { name: "Monster Chela 1L", price: "$100", icon: Beer, color: "green" },
+    { name: "Monster Chela 1L", price: "$100", icon: Beer, color: "green", image: "/images/menu/Cervezas - Monster Chela 1L.png" },
     { name: "Perla Chela 1L", price: "$100", icon: Beer, color: "blue" },
-    { name: "Carrón de 20 Cervezas", price: "$748", icon: Beer, description: "Indio, Lager, Tecate, Tecate Ambar, Tecate Light", color: "yellow" },
+    { name: "Carrón de 20 Cervezas", price: "$748", icon: Beer, description: "Indio, Lager, Tecate, Tecate Ambar, Tecate Light", color: "yellow", image: "/images/menu/Cervezas - Cartón de 20 Cervezas.png" },
   ]
 };
 
@@ -174,8 +185,8 @@ const alimentos = {
         { name: "Hot-Dog con Queso y Papas", price: "" },
     ],
     "Alitas y Papas": [
-        { name: "Alipapas (6 alitas + papas)", price: "", description: "Salsas: Infierno, Mango Habanero, Hot, Bufalo, Tamarindo, B.B.Q" },
-        { name: "Orden de 12 Alitas + Papas", price: "", description: "Bañadas en tu salsa favorita" },
+        { name: "Alipapas (6 alitas + papas)", price: "", description: "Salsas: Infierno, Mango Habanero, Hot, Bufalo, Tamarindo, B.B.Q", image: "/images/menu/Alitas con papas.png" },
+        { name: "Orden de 12 Alitas + Papas", price: "", description: "Bañadas en tu salsa favorita", image: "/images/menu/Alitas con papas (1).png" },
         { name: "Boneless (250grs) + Papas", price: "$180", description: "Bañados en tu salsa favorita" },
     ],
     "Para Saborear": [
@@ -199,6 +210,15 @@ const alimentos = {
 }
 
 export function MenuSection() {
+  const [activeTab, setActiveTab] = useState("promociones");
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (VALID_TABS.includes(hash as (typeof VALID_TABS)[number])) {
+      setActiveTab(hash);
+    }
+  }, []);
+
   const colorClasses = {
       pink: "text-sambuca-pink border-sambuca-pink",
       green: "text-sambuca-lime border-sambuca-lime",
@@ -219,7 +239,7 @@ export function MenuSection() {
         </p>
       </div>
 
-      <Tabs defaultValue="promociones" className="w-full">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto mb-8">
           <TabsTrigger value="promociones">Promociones</TabsTrigger>
           <TabsTrigger value="paquetes">Paquetes</TabsTrigger>
@@ -236,12 +256,25 @@ export function MenuSection() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {promo.deals.map((deal, dealIndex) => (
-                     <div key={dealIndex} className="border-t border-border/30 pt-4">
-                        <div className="flex justify-between items-baseline">
-                            <h4 className="text-xl font-headline tracking-wider text-foreground">{deal.title}</h4>
-                            <p className="text-2xl font-mono text-sambuca-lime">{deal.price}</p>
+                     <div key={dealIndex} className="border-t border-border/30 pt-4 flex gap-3">
+                        {deal.image && (
+                          <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden">
+                            <Image
+                              src={deal.image}
+                              alt={deal.title}
+                              fill
+                              className="object-cover"
+                              sizes="64px"
+                            />
+                          </div>
+                        )}
+                        <div className="flex-grow">
+                          <div className="flex justify-between items-baseline">
+                              <h4 className="text-xl font-headline tracking-wider text-foreground">{deal.title}</h4>
+                              <p className="text-2xl font-mono text-sambuca-lime">{deal.price}</p>
+                          </div>
+                          <CardDescription className="text-muted-foreground text-sm mt-1">{deal.description}</CardDescription>
                         </div>
-                      <CardDescription className="text-muted-foreground text-sm mt-1">{deal.description}</CardDescription>
                     </div>
                   ))}
                 </CardContent>
@@ -280,7 +313,18 @@ export function MenuSection() {
                   {drinks.map((drink) => {
                     const colorClass = colorClasses[drink.color as keyof typeof colorClasses] || colorClasses.default;
                     return (
-                        <Card key={drink.name} className={`bg-card/70 backdrop-blur-sm border-2 border-transparent group transition-all duration-300 ${colorClass}`}>
+                        <Card key={drink.name} className={`bg-card/70 backdrop-blur-sm border-2 border-transparent group transition-all duration-300 overflow-hidden ${colorClass}`}>
+                            {drink.image && (
+                              <div className="relative aspect-[4/3] w-full">
+                                <Image
+                                  src={drink.image}
+                                  alt={drink.name}
+                                  fill
+                                  className="object-cover"
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                />
+                              </div>
+                            )}
                             <CardHeader>
                                 <div className="flex justify-between items-start gap-4">
                                     <CardTitle className={`text-2xl font-headline tracking-wider`}>{drink.name}</CardTitle>
@@ -289,7 +333,7 @@ export function MenuSection() {
                             </CardHeader>
                           <CardContent className="flex-grow flex flex-col justify-between">
                             <div className="space-y-2">
-                                {drink.icon && <drink.icon className="w-8 h-8 opacity-70 mb-2" />}
+                                {!drink.image && drink.icon && <drink.icon className="w-8 h-8 opacity-70 mb-2" />}
                                 {drink.description && <p className="text-muted-foreground text-sm">{drink.description}</p>}
                             </div>
                           </CardContent>
@@ -311,13 +355,25 @@ export function MenuSection() {
                   {items.map((item) => (
                     <Card key={item.name} className="bg-card border border-border/30">
                       <CardContent className="pt-6 flex items-center justify-between gap-4">
-                        {item.icon && <item.icon className="w-8 h-8 text-sambuca-lime flex-shrink-0" />}
+                        {"image" in item && item.image ? (
+                          <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden">
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              fill
+                              className="object-cover"
+                              sizes="64px"
+                            />
+                          </div>
+                        ) : (
+                          "icon" in item && item.icon && <item.icon className="w-8 h-8 text-sambuca-lime flex-shrink-0" />
+                        )}
                          <div className="flex-grow">
                             <div className="flex justify-between items-baseline">
                                 <h4 className="text-xl font-headline tracking-wider text-sambuca-lime">{item.name}</h4>
                                 {item.price && <p className="font-mono text-sambuca-lime text-xl">{item.price}</p>}
                             </div>
-                            {item.description && <p className="text-muted-foreground text-sm mt-1">{item.description}</p>}
+                            {"description" in item && item.description && <p className="text-muted-foreground text-sm mt-1">{item.description}</p>}
                         </div>
                       </CardContent>
                     </Card>

@@ -6,6 +6,7 @@ import { LocationsSection } from "@/components/landing/locations-section";
 import { HeroCarousel } from "@/components/landing/hero-carousel";
 import { GallerySection } from "@/components/landing/gallery-section";
 import { FeaturedProducts } from "@/components/landing/featured-products";
+import { WelcomeShotCta } from "@/components/landing/welcome-shot-cta";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <HeroCarousel />
         <FeaturedProducts />
+        <WelcomeShotCta />
         <GallerySection />
         <LocationsSection />
       </main>
