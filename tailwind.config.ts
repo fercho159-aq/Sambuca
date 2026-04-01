@@ -10,11 +10,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'neon-pink': 'hsl(var(--neon-pink))',
-        'neon-green': 'hsl(var(--neon-green))',
-        'neon-blue': 'hsl(var(--neon-blue))',
-        'neon-yellow': 'hsl(var(--neon-yellow))',
-        'neon-orange': 'hsl(var(--neon-orange))',
+        'sambuca-lime': '#A8C828',
+        'sambuca-lime-dark': '#5A7A10',
+        'sambuca-purple': '#7B4FBF',
+        'sambuca-pink': '#C850A0',
+        'sambuca-bg': '#0A0A0A',
+        'sambuca-surface': '#141414',
+        'sambuca-surface-light': '#1A1A1A',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -73,20 +75,12 @@ export default {
       },
       keyframes: {
         'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
       },
       animation: {
@@ -94,7 +88,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+        sans: ['"DM Sans"', 'sans-serif'],
         headline: ['"Bebas Neue"', 'sans-serif'],
       },
     },

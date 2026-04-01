@@ -3,13 +3,15 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
-import { Beer, Drumstick } from 'lucide-react';
+import Link from "next/link"
+import { Beer, Drumstick, ChevronLeft, ChevronRight } from 'lucide-react';
 import { CiFries } from "react-icons/ci";
 
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi,
 } from "@/components/ui/carousel"
 import { cn } from "@/lib/utils"
 
@@ -47,7 +49,6 @@ const promotions = {
   ]
 };
 
-
 const dayNames = ["DOMINGO", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO"];
 
 export function HeroCarousel() {
@@ -56,6 +57,9 @@ export function HeroCarousel() {
   )
   const [todaysPromos, setTodaysPromos] = React.useState<(typeof promotions)[0] | null>(null);
   const [dayName, setDayName] = React.useState<string | null>(null);
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     const today = new Date().getDay();
@@ -63,19 +67,29 @@ export function HeroCarousel() {
     setTodaysPromos(promotions[today as keyof typeof promotions] || []);
   }, []);
 
+  React.useEffect(() => {
+    if (!api) return;
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   if (!todaysPromos || !dayName) {
     return (
-      <section className="relative h-screen w-full overflow-hidden bg-black flex items-center justify-center">
-        <h2 className="text-4xl font-headline tracking-widest text-neon-pink text-glow animate-pulse">CARGANDO PROMOS...</h2>
+      <section className="relative h-screen w-full overflow-hidden bg-sambuca-bg pattern-dots flex items-center justify-center">
+        <h2 className="text-2xl font-headline tracking-widest text-sambuca-lime animate-pulse">Cargando promos...</h2>
       </section>
     );
   }
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black">
+    <section className="relative h-screen w-full overflow-hidden bg-sambuca-bg">
       <Carousel
         plugins={[plugin.current]}
         className="w-full h-full"
+        setApi={setApi}
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
         opts={{
@@ -83,75 +97,110 @@ export function HeroCarousel() {
         }}
       >
         <CarouselContent className="h-screen ml-0">
-          {todaysPromos.map((promo, index) => {
-            const titleLength = promo.title.length;
-            const titleSizeClass = titleLength > 20 ? 'text-5xl md:text-7xl lg:text-8xl' : 'text-6xl md:text-8xl lg:text-9xl';
-
-            return (
-              <CarouselItem key={index} className="h-screen pl-0">
-                <div className="w-full h-full relative">
-                  {/* Imagen de fondo */}
-                  <div className="absolute inset-0">
-                    <Image
-                      src={promo.imageUrl}
-                      alt={promo.description.join(' ')}
-                      fill
-                      className="object-cover"
-                      priority={index === 0}
-                      unoptimized
-                      data-ai-hint={promo.imageHint}
-                    />
-                  </div>
-
-                  {/* Overlays */}
-                  <div className="absolute inset-0 bg-black/70 z-[1]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-[2]" />
-
-                  {/* Contenido */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 p-4">
-                    <h2 className="text-4xl md:text-5xl font-headline uppercase tracking-widest mb-4">
-                        <span className="text-neon-blue text-glow">PROMOS DE {dayName.toUpperCase()}</span>
-                    </h2>
-                    <h1 className={cn("font-black tracking-tighter uppercase mb-2", titleSizeClass)}>
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 drop-shadow-[0_0_15px_rgba(255,0,110,0.6)]">
-                        {promo.title}
-                        </span>
-                    </h1>
-
-                    <p className="font-mono text-5xl md:text-6xl text-neon-yellow text-glow mb-6">
-                        {promo.price}
-                    </p>
-                    
-                    <div className="mt-2 text-lg md:text-xl lg:text-2xl font-light max-w-3xl drop-shadow-lg space-y-2">
-                      {promo.description.map((item, itemIndex) => {
-                        const lowerCaseItem = item.toLowerCase();
-                        let Icon = null;
-
-                        if (lowerCaseItem.includes('cerveza')) {
-                            Icon = Beer;
-                        } else if (lowerCaseItem.includes('alitas')) {
-                            Icon = Drumstick;
-                        } else if (lowerCaseItem.includes('papas')) {
-                            Icon = CiFries;
-                        } else if (promo.title.toLowerCase().includes('tritón')) {
-                            Icon = Beer;
-                        }
-                        
-                        return (
-                          <div key={itemIndex} className="flex items-center justify-center gap-3">
-                            {Icon && <Icon className="h-6 w-6 text-neon-yellow" />}
-                            <span>{item}</span>
-                          </div>
-                        )
-                      })}
-                    </div>
-                    
-                  </div>
+          {todaysPromos.map((promo, index) => (
+            <CarouselItem key={index} className="h-screen pl-0">
+              <div className="w-full h-full relative">
+                {/* Background image with fallback pattern */}
+                <div className="absolute inset-0 pattern-dots">
+                  <Image
+                    src={promo.imageUrl}
+                    alt={promo.description.join(' ')}
+                    fill
+                    className="object-cover"
+                    priority={index === 0}
+                    unoptimized
+                    data-ai-hint={promo.imageHint}
+                  />
                 </div>
-              </CarouselItem>
-            )
-          })}
+
+                {/* Dark overlay for legibility */}
+                <div className="absolute inset-0 bg-black/60 z-[1]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-sambuca-bg via-transparent to-sambuca-bg/40 z-[2]" />
+
+                {/* Content - centered with flexbox */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
+                  {/* Day badge - pill style */}
+                  <span className="inline-block bg-sambuca-pink text-white text-xs font-semibold tracking-wider px-4 py-1.5 rounded-full mb-6 uppercase">
+                    Promos de {dayName}
+                  </span>
+
+                  {/* Product name */}
+                  <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-white tracking-wide mb-3" style={{ textShadow: '0 0 30px rgba(168, 200, 40, 0.3)' }}>
+                    {promo.title}
+                  </h1>
+
+                  {/* Price */}
+                  <p className="text-sambuca-lime font-headline text-4xl md:text-5xl lg:text-6xl mb-6">
+                    {promo.price}
+                  </p>
+
+                  {/* Description lines */}
+                  <div className="space-y-2 mb-8 max-w-2xl">
+                    {promo.description.map((item, itemIndex) => {
+                      const lowerCaseItem = item.toLowerCase();
+                      let Icon = null;
+
+                      if (lowerCaseItem.includes('cerveza')) {
+                        Icon = Beer;
+                      } else if (lowerCaseItem.includes('alitas')) {
+                        Icon = Drumstick;
+                      } else if (lowerCaseItem.includes('papas')) {
+                        Icon = CiFries;
+                      } else if (promo.title.toLowerCase().includes('tritón')) {
+                        Icon = Beer;
+                      }
+
+                      return (
+                        <div key={itemIndex} className="flex items-center justify-center gap-2 text-white/90">
+                          {Icon && <Icon className="h-5 w-5 text-sambuca-lime flex-shrink-0" />}
+                          <span className="text-sm md:text-base font-light">{item}</span>
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  {/* CTA Button */}
+                  <Link
+                    href="/menu"
+                    className="border-2 border-sambuca-lime text-sambuca-lime px-8 py-3 rounded-md font-medium text-sm tracking-wide transition-all duration-300 hover:bg-sambuca-lime hover:text-sambuca-bg"
+                  >
+                    Ver Menú Completo
+                  </Link>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
         </CarouselContent>
+
+        {/* Navigation arrows */}
+        <button
+          onClick={() => api?.scrollPrev()}
+          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white/70 transition-all duration-300 hover:border-sambuca-purple hover:text-sambuca-purple hover:bg-sambuca-purple/10"
+        >
+          <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+        </button>
+        <button
+          onClick={() => api?.scrollNext()}
+          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white/70 transition-all duration-300 hover:border-sambuca-purple hover:text-sambuca-purple hover:bg-sambuca-purple/10"
+        >
+          <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+        </button>
+
+        {/* Dot indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {Array.from({ length: count }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => api?.scrollTo(i)}
+              className={cn(
+                "w-2 h-2 rounded-full transition-all duration-300",
+                current === i
+                  ? "bg-sambuca-lime w-6"
+                  : "bg-white/40 hover:bg-white/60"
+              )}
+            />
+          ))}
+        </div>
       </Carousel>
     </section>
   )

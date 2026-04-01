@@ -15,6 +15,7 @@ import { SnackIcon } from "../icons/snack-icon";
 const paquetes = [
   {
     title: "Paquete Sambuca 1",
+    price: "$2,500",
     items: [
       "1 Samburico",
       "1 Boneless 250 grs.",
@@ -27,6 +28,7 @@ const paquetes = [
   },
   {
     title: "Paquete Sambuca 2",
+    price: "$2,800",
     items: [
       "1 Samburico",
       "1 Boneless 250 grs.",
@@ -39,6 +41,7 @@ const paquetes = [
   },
   {
     title: "Paquete Sambuca 3",
+    price: "$3,300",
     items: [
       "1 Samburico",
       "1 Boneless 250 grs.",
@@ -51,6 +54,7 @@ const paquetes = [
   },
   {
     title: "Paquete Sambuca 4",
+    price: "$3,900",
     items: [
       "1 Samburico",
       "1 Boneless 250 grs.",
@@ -196,21 +200,22 @@ const alimentos = {
 
 export function MenuSection() {
   const colorClasses = {
-      pink: "text-neon-pink border-neon-pink group-hover:shadow-neon-pink",
-      green: "text-neon-green border-neon-green group-hover:shadow-neon-green",
-      blue: "text-neon-blue border-neon-blue group-hover:shadow-neon-blue",
-      yellow: "text-neon-yellow border-neon-yellow group-hover:shadow-neon-yellow",
-      orange: "text-neon-orange border-neon-orange group-hover:shadow-neon-orange",
-      default: "text-primary border-primary group-hover:shadow-neon-pink"
+      pink: "text-sambuca-pink border-sambuca-pink",
+      green: "text-sambuca-lime border-sambuca-lime",
+      blue: "text-sambuca-purple border-sambuca-purple",
+      yellow: "text-sambuca-lime border-sambuca-lime",
+      orange: "text-sambuca-pink border-sambuca-pink",
+      default: "text-sambuca-lime border-sambuca-lime"
   }
   return (
     <section id="menu" className="container mx-auto px-4">
       <div className="text-center mb-12">
-        <h1 className="text-5xl md:text-7xl font-headline tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 text-glow">
+        <h1 className="text-5xl md:text-7xl font-headline tracking-wider text-white relative inline-block pb-3">
           Nuestro Menú
+          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-sambuca-lime rounded-full" />
         </h1>
-        <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-          Descubre los sabores que encienden la noche.
+        <p className="text-lg text-gray-400 mt-4 max-w-3xl mx-auto">
+          Descubre los sabores que hacen la noche.
         </p>
       </div>
 
@@ -225,16 +230,16 @@ export function MenuSection() {
         <TabsContent value="promociones">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {promociones.map((promo, index) => (
-              <Card key={index} className="bg-card border-2 border-accent/50 hover:border-accent transition-all duration-300 group hover:box-glow-accent flex flex-col">
+              <Card key={index} className="bg-sambuca-surface-light border-l-4 border-sambuca-pink transition-all duration-300 group flex flex-col">
                  <CardHeader>
-                  <CardTitle className="text-3xl font-headline tracking-wider text-accent transition-all">{promo.day}</CardTitle>
+                  <CardTitle className="text-3xl font-headline tracking-wider text-sambuca-pink transition-all">{promo.day}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {promo.deals.map((deal, dealIndex) => (
                      <div key={dealIndex} className="border-t border-border/30 pt-4">
                         <div className="flex justify-between items-baseline">
                             <h4 className="text-xl font-headline tracking-wider text-foreground">{deal.title}</h4>
-                            <p className="text-2xl font-mono text-accent">{deal.price}</p>
+                            <p className="text-2xl font-mono text-sambuca-lime">{deal.price}</p>
                         </div>
                       <CardDescription className="text-muted-foreground text-sm mt-1">{deal.description}</CardDescription>
                     </div>
@@ -248,9 +253,12 @@ export function MenuSection() {
         <TabsContent value="paquetes">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {paquetes.map((pkg, index) => (
-                    <Card key={index} className="bg-card border-2 border-primary/50 hover:border-primary transition-all duration-300 group hover:box-glow-primary">
+                    <Card key={index} className="bg-sambuca-surface-light border-l-4 border-sambuca-lime transition-all duration-300 group">
                         <CardHeader>
-                            <CardTitle className="text-4xl font-headline tracking-wider text-primary group-hover:text-glow transition-all duration-300">{pkg.title}</CardTitle>
+                            <div className="flex justify-between items-baseline">
+                              <CardTitle className="text-4xl font-headline tracking-wider text-sambuca-lime transition-all duration-300">{pkg.title}</CardTitle>
+                              <span className="text-2xl font-mono text-sambuca-lime">{pkg.price}</span>
+                            </div>
                         </CardHeader>
                         <CardContent>
                             <ul className="space-y-2 list-disc list-inside text-foreground/80">
@@ -267,7 +275,7 @@ export function MenuSection() {
           <div className="space-y-12">
             {Object.entries(bebidas).map(([category, drinks]) => (
               <div key={category}>
-                <h3 className="text-4xl md:text-5xl font-headline tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-400 text-glow-primary mb-6">{category}</h3>
+                <h3 className="text-3xl md:text-4xl font-headline tracking-wider text-sambuca-purple mb-6">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {drinks.map((drink) => {
                     const colorClass = colorClasses[drink.color as keyof typeof colorClasses] || colorClasses.default;
@@ -298,16 +306,16 @@ export function MenuSection() {
            <div className="space-y-12">
             {Object.entries(alimentos).map(([category, items]) => (
               <div key={category}>
-                <h3 className="text-4xl md:text-5xl font-headline tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 text-glow-primary mb-6">{category}</h3>
+                <h3 className="text-3xl md:text-4xl font-headline tracking-wider text-sambuca-purple mb-6">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {items.map((item) => (
                     <Card key={item.name} className="bg-card border border-border/30">
                       <CardContent className="pt-6 flex items-center justify-between gap-4">
-                        {item.icon && <item.icon className="w-8 h-8 text-accent flex-shrink-0" />}
+                        {item.icon && <item.icon className="w-8 h-8 text-sambuca-lime flex-shrink-0" />}
                          <div className="flex-grow">
                             <div className="flex justify-between items-baseline">
-                                <h4 className="text-xl font-headline tracking-wider text-accent">{item.name}</h4>
-                                {item.price && <p className="font-mono text-accent text-xl">{item.price}</p>}
+                                <h4 className="text-xl font-headline tracking-wider text-sambuca-lime">{item.name}</h4>
+                                {item.price && <p className="font-mono text-sambuca-lime text-xl">{item.price}</p>}
                             </div>
                             {item.description && <p className="text-muted-foreground text-sm mt-1">{item.description}</p>}
                         </div>

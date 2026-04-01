@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Nuestra Historia",
-  description: "Conoce la historia de Sambuca Bar. Nacimos para revolucionar las noches de CDMX con un ambiente neón y coctelería de autor.",
+  description: "Conoce la historia de Sambuca Bar. Nacimos para revolucionar las noches de CDMX con coctelería de autor y la mejor vibra.",
 };
 
 export default function NosotrosPage() {
@@ -15,16 +15,17 @@ export default function NosotrosPage() {
       <main className="flex-grow pt-24 md:pt-32">
         <section className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-7xl font-headline tracking-widest text-glow-primary">
+            <h1 className="text-5xl md:text-7xl font-headline tracking-wider text-white relative inline-block pb-3">
               Nuestra Historia
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-sambuca-lime rounded-full" />
             </h1>
-            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-              Nacimos con la misión de revolucionar las noches, creando un espacio donde la energía del neón se encuentra con los sabores más audaces.
+            <p className="text-lg text-gray-400 mt-4 max-w-3xl mx-auto">
+              Nacimos con la misión de revolucionar las noches, creando un espacio donde la vibra se encuentra con los sabores más audaces.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="relative aspect-square rounded-lg overflow-hidden box-glow-primary">
+            <div className="relative aspect-square rounded-lg overflow-hidden border-l-4 border-sambuca-lime">
                <Image
                 src="/images/pato shot.jpg"
                 alt="Interior del bar Sambuca con luces de neón"
@@ -35,7 +36,7 @@ export default function NosotrosPage() {
             </div>
             <div className="space-y-6 text-lg text-foreground/80">
               <p>
-                Sambuca no es solo un bar, es una experiencia. Desde nuestra fundación en el corazón de la ciudad, hemos buscado ser el epicentro de la vida nocturna, el punto de partida para noches inolvidables. Nuestro concepto se basa en la fusión de un ambiente vibrante, iluminado por luces de neón, y una coctelería de autor que desafía lo convencional.
+                Sambuca no es solo un bar, es una experiencia. Desde nuestra fundación en el corazón de la ciudad, hemos buscado ser el epicentro de la vida nocturna, el punto de partida para noches inolvidables. Nuestro concepto se basa en la fusión de un ambiente vibrante y una coctelería de autor que desafía lo convencional.
               </p>
               <p>
                 Cada rincón de Sambuca está diseñado para estimular tus sentidos. Creemos que una gran noche comienza con un gran ambiente, buena música y, por supuesto, bebidas excepcionales. Nuestro equipo de mixólogos expertos trabaja incansablemente para innovar y sorprender, creando tragos que son tan visualmente impactantes como deliciosos.

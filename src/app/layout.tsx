@@ -5,14 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: {
     template: "%s | Sambuca Bar",
-    default: "Sambuca Bar | La Pre-Fiesta Neón en CDMX",
+    default: "Sambuca Bar | La Pre-Fiesta en CDMX",
   },
   description:
-    "Sambuca: El bar con ambiente neón para la pre-fiesta en CDMX. Disfruta de nuestras promociones, cocteles, comida y la mejor música en nuestras sucursales.",
+    "Sambuca: El bar de pre-fiesta en CDMX. Disfruta de nuestras promociones, cocteles, comida y la mejor música en nuestras sucursales.",
   keywords: [
     "Sambuca",
     "Bar",
-    "Neon",
     "Pre-fiesta",
     "CDMX",
     "Cocteles",
@@ -29,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="es" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -38,11 +37,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="bg-background text-foreground antialiased">
+      <body className="bg-sambuca-bg text-white antialiased font-sans">
         {children}
         <Toaster />
       </body>

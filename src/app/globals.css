@@ -4,69 +4,74 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 330 100% 71%;
-    --primary-foreground: 330 84% 10%;
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 348 100% 50%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    /* Sambuca Brand Colors */
+    --color-primary: #A8C828;
+    --color-primary-dark: #5A7A10;
+    --color-secondary: #7B4FBF;
+    --color-accent: #C850A0;
+    --color-bg: #0A0A0A;
+    --color-surface: #141414;
+    --color-surface-light: #1A1A1A;
+    --color-white: #FFFFFF;
+
+    /* shadcn/ui system mapped to Sambuca palette */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 74 70% 47%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 271 43% 53%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 319 52% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 330 100% 71%;
+    --ring: 74 70% 47%;
     --radius: 0.5rem;
 
-    /* New Neon Colors */
-    --neon-pink: 330 100% 71%; /* Same as primary */
-    --neon-green: 130 90% 50%;
-    --neon-blue: 200 100% 55%;
-    --neon-yellow: 50 100% 55%;
-    --neon-orange: 30 100% 55%;
+    --chart-1: 74 70% 47%;
+    --chart-2: 271 43% 53%;
+    --chart-3: 319 52% 55%;
+    --chart-4: 74 50% 30%;
+    --chart-5: 0 0% 64%;
 
-    --chart-1: 330 100% 71%;
-    --chart-2: 200 100% 55%;
-    --chart-3: 130 90% 50%;
-    --chart-4: 50 100% 55%;
-    --chart-5: 30 100% 55%;
-
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 98%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 15%;
-    --sidebar-primary: 330 100% 71%;
-    --sidebar-primary-foreground: 330 84% 10%;
+    --sidebar-primary: 74 70% 47%;
+    --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-ring: 330 100% 71%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-ring: 74 70% 47%;
   }
+
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 330 100% 71%;
-    --primary-foreground: 330 84% 10%;
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 348 100% 50%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 74 70% 47%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 271 43% 53%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 319 52% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 330 100% 71%;
+    --ring: 74 70% 47%;
   }
 }
 
@@ -77,77 +82,63 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {
-  .text-glow {
-    text-shadow:
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor;
+  /* Sambuca brand utilities */
+  .text-sambuca-primary {
+    color: var(--color-primary);
   }
-  
-  .box-glow {
-     box-shadow: 0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary));
+  .text-sambuca-secondary {
+    color: var(--color-secondary);
   }
-  
-  .box-glow-primary {
-    box-shadow: 0 0 8px hsl(var(--primary)), 0 0 15px hsl(var(--primary));
+  .text-sambuca-accent {
+    color: var(--color-accent);
   }
-
-  .box-glow-accent {
-    box-shadow: 0 0 8px hsl(var(--accent)), 0 0 15px hsl(var(--accent));
+  .bg-sambuca-bg {
+    background-color: var(--color-bg);
   }
-  
-  .text-glow-primary {
-    color: hsl(var(--primary));
-    text-shadow: 0 0 8px hsl(var(--primary) / 0.8), 0 0 15px hsl(var(--primary) / 0.5);
+  .bg-sambuca-surface {
+    background-color: var(--color-surface);
+  }
+  .bg-sambuca-surface-light {
+    background-color: var(--color-surface-light);
   }
 
-  .text-neon-pink {
-    color: hsl(var(--neon-pink));
+  /* Gradient line - navbar and footer */
+  .gradient-line {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
   }
-  .text-neon-green {
-    color: hsl(var(--neon-green));
+
+  /* Geometric fallback pattern for hero */
+  .pattern-dots {
+    background-image: radial-gradient(circle, #1A1A1A 1px, transparent 1px);
+    background-size: 24px 24px;
   }
-  .text-neon-blue {
-    color: hsl(var(--neon-blue));
+
+  .pattern-diagonal {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      #1A1A1A 10px,
+      #1A1A1A 11px
+    );
   }
-  .text-neon-yellow {
-    color: hsl(var(--neon-yellow));
+
+  /* Fade-in animation for sections */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
-  .text-neon-orange {
-    color: hsl(var(--neon-orange));
-  }
-  .border-neon-pink {
-    border-color: hsl(var(--neon-pink));
-  }
-  .border-neon-green {
-    border-color: hsl(var(--neon-green));
-  }
-  .border-neon-blue {
-    border-color: hsl(var(--neon-blue));
-  }
-  .border-neon-yellow {
-    border-color: hsl(var(--neon-yellow));
-  }
-  .border-neon-orange {
-    border-color: hsl(var(--neon-orange));
-  }
-  .shadow-neon-pink {
-    box-shadow: 0 0 15px hsl(var(--neon-pink) / 0.5);
-  }
-  .shadow-neon-green {
-    box-shadow: 0 0 15px hsl(var(--neon-green) / 0.5);
-  }
-  .shadow-neon-blue {
-    box-shadow: 0 0 15px hsl(var(--neon-blue) / 0.5);
-  }
-  .shadow-neon-yellow {
-    box-shadow: 0 0 15px hsl(var(--neon-yellow) / 0.5);
-  }
-  .shadow-neon-orange {
-    box-shadow: 0 0 15px hsl(var(--neon-orange) / 0.5);
+
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   /* Prize wheel animations */
@@ -181,14 +172,38 @@
 
   @keyframes glow-pulse {
     0%, 100% {
-      box-shadow: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3);
+      box-shadow: 0 0 20px rgba(168, 200, 40, 0.3), 0 0 40px rgba(168, 200, 40, 0.15);
     }
     50% {
-      box-shadow: 0 0 30px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--primary) / 0.5);
+      box-shadow: 0 0 30px rgba(168, 200, 40, 0.5), 0 0 60px rgba(168, 200, 40, 0.25);
     }
   }
 
   .glow-pulse {
     animation: glow-pulse 1.5s ease-in-out infinite;
+  }
+
+  /* Legacy compatibility classes */
+  .text-glow {
+    text-shadow:
+      0 0 5px currentColor,
+      0 0 10px currentColor;
+  }
+
+  .box-glow {
+    box-shadow: 0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary));
+  }
+
+  .box-glow-primary {
+    box-shadow: 0 0 8px rgba(168, 200, 40, 0.4), 0 0 15px rgba(168, 200, 40, 0.2);
+  }
+
+  .box-glow-accent {
+    box-shadow: 0 0 8px rgba(200, 80, 160, 0.4), 0 0 15px rgba(200, 80, 160, 0.2);
+  }
+
+  .text-glow-primary {
+    color: var(--color-primary);
+    text-shadow: 0 0 8px rgba(168, 200, 40, 0.5);
   }
 }

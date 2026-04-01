@@ -35,10 +35,11 @@ export default function ReservarPage() {
         <section className="container mx-auto px-4 py-12">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-5xl md:text-7xl font-headline tracking-widest text-glow-accent">
+              <h1 className="text-5xl md:text-7xl font-headline tracking-wider text-white relative inline-block pb-3">
                 Reservar
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-sambuca-lime rounded-full" />
               </h1>
-              <p className="text-lg text-muted-foreground mt-4">
+              <p className="text-lg text-gray-400 mt-4">
                 Asegura tu lugar para una noche inolvidable.
               </p>
             </div>
@@ -115,7 +116,7 @@ export default function ReservarPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-accent text-accent-foreground rounded-none hover:bg-accent/90 text-lg font-headline tracking-wider transition-all duration-300 h-auto py-3 box-glow-accent"
+                className="w-full bg-sambuca-lime text-sambuca-bg hover:bg-sambuca-purple hover:text-white text-lg font-semibold tracking-wider transition-all duration-300 h-auto py-3 rounded-md"
               >
                 Confirmar Reservación
               </Button>
