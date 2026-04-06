@@ -45,6 +45,7 @@ const paquetes = [
     ],
     bottle: "1 Botella a elegir (Vodka, Tequila, Ron, Brandy, LB, Etiqueta Roja, William Passport)",
     includes: "Incluye 3 jarras de 1 lt de jugo o 3 refrescos de 1 lt",
+    image: "/images/menu/Paquete 2 Completo.png"
   },
   {
     title: "Paquete Sambuca 3",
