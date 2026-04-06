@@ -69,10 +69,11 @@ const paquetes = [
       "1 Boneless 250 grs.",
       "1 Lamborghini",
       "1 Sambupato Vodka",
-      "2 Carrón de 20 Cervezas de medio",
+      "Pack de 40 Cervezas de medio",
     ],
     bottle: "1 Botella a elegir (Whisky o Cognac, excepto Buchanan’s 18 años)",
     includes: "Incluye 3 jarras de 1 lt de jugo o 3 refrescos de 1 lt",
+    image: "/images/menu/Paquete 4 Completo.png"
   },
 ];
 
