@@ -55,10 +55,11 @@ const paquetes = [
       "1 Boneless 250 grs.",
       "1 Lamborghini",
       "1 Sambupato Vodka",
-      "2 Carrón de 20 Cervezas de medio",
+      "Pack de 30 Cervezas de medio",
     ],
     bottle: "1 Botella a elegir (Vodka, Tequila, Ron, Brandy, LB, Etiqueta Roja, William Passport)",
     includes: "Incluye 3 jarras de 1 lt de jugo o 3 refrescos de 1 lt",
+    image: "/images/menu/Paquete 3 Completo.png"
   },
   {
     title: "Paquete Sambuca 4",
