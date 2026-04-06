@@ -155,7 +155,7 @@ const bebidas = {
   ],
   "Micheladas": [
     { name: "Micheladas Especiales", price: "$120", icon: Beer, description: "1.25L. Mango, Cereza, Gomitas, Cacahuates, Cueritos.", color: "yellow", image: "/images/menu/Michelada Especial con gomitas.png" },
-    { name: "Especial de Camarón", price: "$200", icon: Beer, description: "1Lt Chela + Camarón. Vaso escarchado especial.", color: "orange" },
+    { name: "Especial de Camarón", price: "$200", icon: Beer, description: "1Lt Chela + Camarón. Vaso escarchado especial.", color: "orange", image: "/images/menu/Michelada Especial de Camaron 1L.png" },
   ],
   "Para Compartir (Sambupatos)": [
     { name: "Baby Vodka (10 Shots)", price: "$300", icon: Bomb, description: "Mango, fresa, cereza, tamarindo, frutos rojos, y más.", color: "green", image: "/images/menu/Sambupatos - Baby Vodka (10 Shots).png" },
