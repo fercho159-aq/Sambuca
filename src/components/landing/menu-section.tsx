@@ -320,7 +320,7 @@ export function MenuSection() {
                                   src={drink.image}
                                   alt={drink.name}
                                   fill
-                                  className="object-cover"
+                                  className="object-contain p-4"
                                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 />
                               </div>
