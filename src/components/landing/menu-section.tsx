@@ -31,6 +31,7 @@ const paquetes = [
       "1 Botella a elegir (Vodka, Tequila, Ron, Brandy, Etiqueta Roja, William Passport, JB)",
     ],
     includes: "Incluye 3 jarras de 1 lt de jugo o 3 refrescos de 1 lt",
+    image: "/images/menu/Paquete 1 Completo.png"
   },
   {
     title: "Paquete Sambuca 2",
@@ -294,10 +295,19 @@ export function MenuSection() {
                             </div>
                         </CardHeader>
                         <CardContent>
-                            <ul className="space-y-2 list-disc list-inside text-foreground/80">
-                                {pkg.items.map((item, i) => <li key={i}>{item}</li>)}
-                            </ul>
-                            <p className="text-primary/80 mt-4 text-sm font-semibold">{pkg.includes}</p>
+                            <div className="flex flex-col sm:flex-row gap-6 items-center">
+                                <div className="flex-1">
+                                    <ul className="space-y-2 list-disc list-inside text-foreground/80">
+                                        {pkg.items.map((item, i) => <li key={i}>{item}</li>)}
+                                    </ul>
+                                    <p className="text-primary/80 mt-4 text-sm font-semibold">{pkg.includes}</p>
+                                </div>
+                                {pkg.image && (
+                                    <div className="relative w-full sm:w-1/2 md:w-2/5 xl:w-1/2 aspect-square flex-shrink-0">
+                                        <Image src={pkg.image} alt={pkg.title} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 50vw" />
+                                    </div>
+                                )}
+                            </div>
                         </CardContent>
                     </Card>
                 ))}
