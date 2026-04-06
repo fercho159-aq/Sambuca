@@ -296,24 +296,24 @@ export function MenuSection() {
                         </CardHeader>
                         <CardContent>
                             <div className="flex flex-col sm:flex-row gap-6 items-start">
-                                <div className="flex-1">
+                                <div className="flex-1 w-full overflow-hidden">
                                     <ul className="space-y-2 list-disc list-inside text-foreground/80">
                                         {pkg.items.map((item, i) => <li key={i}>{item}</li>)}
                                     </ul>
+                                    {pkg.bottle && (
+                                        <div className="flex items-start text-foreground/80 mt-4">
+                                            <span className="mr-2 mt-2 inline-block w-1.5 h-1.5 rounded-full bg-foreground flex-shrink-0" />
+                                            <p>{pkg.bottle}</p>
+                                        </div>
+                                    )}
                                 </div>
                                 {pkg.image && (
-                                    <div className="relative w-full sm:w-1/2 md:w-2/5 xl:w-1/2 aspect-square flex-shrink-0 -mt-2">
+                                    <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 flex-shrink-0 sm:-mt-2 mx-auto sm:mx-0">
                                         <Image src={pkg.image} alt={pkg.title} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 50vw" />
                                     </div>
                                 )}
                             </div>
                             <div className="mt-4">
-                                {pkg.bottle && (
-                                    <div className="flex items-start text-foreground/80">
-                                        <span className="mr-2 mt-2 inline-block w-1.5 h-1.5 rounded-full bg-foreground flex-shrink-0" />
-                                        <p>{pkg.bottle}</p>
-                                    </div>
-                                )}
                                 <p className="text-primary/80 mt-4 text-[13px] sm:text-sm font-semibold whitespace-nowrap overflow-x-auto overflow-y-hidden">{pkg.includes}</p>
                             </div>
                         </CardContent>
