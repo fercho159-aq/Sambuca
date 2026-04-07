@@ -190,7 +190,7 @@ const alimentos = {
     "Alitas y Papas": [
         { name: "Alipapas (6 alitas + papas)", price: "", description: "Salsas: Infierno, Mango Habanero, Hot, Bufalo, Tamarindo, B.B.Q", image: "/images/menu/Alitas con papas.png" },
         { name: "Orden de 12 Alitas + Papas", price: "", description: "Bañadas en tu salsa favorita", image: "/images/menu/Alitas con papas (1).png" },
-        { name: "Boneless (250grs) + Papas", price: "$180", description: "Bañados en tu salsa favorita" },
+        { name: "Boneless (250grs) + Papas", price: "$180", description: "Bañados en tu salsa favorita", image: "/images/menu/Boneless con papas.png" },
     ],
     "Para Saborear": [
         { name: "Nuggets de Pollo (6 pz) + Papas", price: "$60", icon: PizzaIcon },
@@ -393,7 +393,7 @@ export function MenuSection() {
                                 <h4 className="text-xl font-headline tracking-wider text-sambuca-lime">{item.name}</h4>
                                 <div className="flex items-center gap-2">
                                   {item.price && <p className="font-mono text-sambuca-lime text-xl">{item.price}</p>}
-                                  <p style={{ color: "#FF0000" }} className="font-semibold text-sm md:text-base whitespace-nowrap"> ̶N̶o̶ ̶D̶i̶s̶p̶o̶n̶i̶b̶l̶e̶ </p>
+                                  {category !== "Alitas y Papas" && <p style={{ color: "#FF0000" }} className="font-semibold text-sm md:text-base whitespace-nowrap"> ̶N̶o̶ ̶D̶i̶s̶p̶o̶n̶i̶b̶l̶e̶ </p>}
                                 </div>
                             </div>
                             {"description" in item && item.description && <p className="text-muted-foreground text-sm mt-1">{item.description}</p>}
