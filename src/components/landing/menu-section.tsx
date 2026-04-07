@@ -193,7 +193,7 @@ const alimentos = {
         { name: "Boneless (250grs) + Papas", price: "$180", description: "Bañados en tu salsa favorita", image: "/images/menu/Boneless con papas.png" },
     ],
     "Para Saborear": [
-        { name: "Nuggets de Pollo (6 pz) + Papas", price: "$60", icon: PizzaIcon, image: "/images/menu/Nuggets de Pollo.png" },
+        { name: "Nuggets de Pollo (6 pz) + Papas", price: "$60", icon: PizzaIcon, image: "/images/menu/Nuggets de Pollo con Papas 2.png" },
         { name: "Papas a la Francesa", price: "$65", icon: PizzaIcon },
         { name: "Botanas de Locura", price: "$80", description: "Papas, churritos, gomitas/cacahuates y salsas", icon: PizzaIcon },
         { name: "Samburico", price: "$140", description: "6 Alitas, 6 Nuggets, Papas a la Francesa", icon: PizzaIcon, image: "/images/menu/Samburico.png" },
