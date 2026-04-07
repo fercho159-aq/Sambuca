@@ -155,7 +155,7 @@ const bebidas = {
   "Neon Drinks": [
     { name: "Sencillas Litro", price: "$120", icon: GlassWater, description: "Yellow On, Orange On, Blue On, Pink On, Green On. No incluye mini botella.", color: "yellow", image: "/images/menu/Neon Drinks - 1L.png" },
     { name: "Con Patito", price: "$130", icon: DuckIcon, description: "Pink On, Green On, Blue On, Yellow On, Orange On. 'Enciende tu bebida'. Incluye patito de regalo.", color: "pink", image: "/images/menu/Neon Drinks - Con Patito.png" },
-    { name: "Especiales Litro", price: "$140", icon: BottleIcon, description: "Orange On, Yellow On, Green On, Pink On, Blue On. Incluye mini botella de regalo.", color: "blue" },
+    { name: "Especiales Litro", price: "$140", icon: BottleIcon, description: "Orange On, Yellow On, Green On, Pink On, Blue On. Incluye mini botella de regalo.", color: "blue", image: "/images/menu/Neon Drink Especial Rosa.png" },
   ],
   "Micheladas": [
     { name: "Micheladas Especiales", price: "$120", icon: Beer, description: "1.25L. Mango, Cereza, Gomitas, Cacahuates, Cueritos.", color: "yellow", image: "/images/menu/Michelada Especial con gomitas.png" },
