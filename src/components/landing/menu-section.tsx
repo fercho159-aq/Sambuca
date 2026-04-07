@@ -169,7 +169,6 @@ const bebidas = {
   ],
   "Cervezas": [
     { name: "Monster Chela 1L", price: "$100", icon: Beer, color: "green", image: "/images/menu/Cervezas - Monster Chela 1L.png" },
-    { name: "Perla Chela 1L", price: "$100", icon: Beer, color: "blue" },
     { name: "Carrón de 20 Cervezas", price: "$748", icon: Beer, description: "Indio, Lager, Tecate, Tecate Ambar, Tecate Light", color: "yellow", image: "/images/menu/Cervezas - Cartón de 20 Cervezas.png" },
   ]
 };
@@ -330,7 +329,7 @@ export function MenuSection() {
             {Object.entries(bebidas).map(([category, drinks]) => (
               <div key={category}>
                 <h3 className="text-3xl md:text-4xl font-headline tracking-wider text-sambuca-purple mb-6">{category}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className={`grid grid-cols-1 md:grid-cols-2 ${drinks.length === 1 ? 'lg:grid-cols-1 max-w-md mx-auto md:max-w-md' : drinks.length === 2 ? 'lg:grid-cols-2 max-w-5xl mx-auto' : 'lg:grid-cols-3'} gap-6`}>
                   {drinks.map((drink) => {
                     const colorClass = colorClasses[drink.color as keyof typeof colorClasses] || colorClasses.default;
                     return (
