@@ -388,10 +388,13 @@ export function MenuSection() {
                         ) : (
                           "icon" in item && item.icon && <item.icon className="w-8 h-8 text-sambuca-lime flex-shrink-0" />
                         )}
-                         <div className="flex-grow">
-                            <div className="flex justify-between items-baseline">
+                          <div className="flex-grow">
+                            <div className="flex justify-between items-center gap-4">
                                 <h4 className="text-xl font-headline tracking-wider text-sambuca-lime">{item.name}</h4>
-                                {item.price && <p className="font-mono text-sambuca-lime text-xl">{item.price}</p>}
+                                <div className="flex items-center gap-2">
+                                  {item.price && <p className="font-mono text-sambuca-lime text-xl">{item.price}</p>}
+                                  <p style={{ color: "#FF0000" }} className="font-semibold text-sm md:text-base whitespace-nowrap"> ̶N̶o̶ ̶D̶i̶s̶p̶o̶n̶i̶b̶l̶e̶ </p>
+                                </div>
                             </div>
                             {"description" in item && item.description && <p className="text-muted-foreground text-sm mt-1">{item.description}</p>}
                         </div>
