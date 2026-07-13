@@ -8,24 +8,32 @@ const branches = [
     address: "Rio de la Magdalena 38, Tizapán San Ángel, Álvaro Obregón, 01000 CDMX",
     hours: "Jue-Dom 6pm - 3am",
     mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.331238478744!2d-99.2015386889814!3d19.35479088190302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff8a5d3c8f7b%3A0x294187985473063!2sBar%20Sambuca%20San%20%C3%81ngel!5e0!3m2!1sen!2sus!4v1716921858368!5m2!1sen!2sus&output=embed",
-    mapsUrl: "https://maps.google.com/?q=Bar+Sambuca+San+Angel+CDMX",
-    facebookUrl: "https://facebook.com/sambucasanangel",
+    mapsUrl: "https://maps.app.goo.gl/PGCCfZAgnQUQKW6LA",
+    facebookUrl: "https://www.facebook.com/BarSambucaOficial",
   },
   {
     name: "Sambuca Copilco",
     address: "Av. Pedro Henríquez Ureña 546, Los Reyes, Coyoacán, 04330 CDMX",
     hours: "Todos los días 2pm - 12am",
     mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.331238478744!2d-99.18349168898138!3d19.35479088190302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fffa488b901b%3A0x6b5a3e74e3a47a0!2sSambuca%20Copilco!5e0!3m2!1sen!2sus!4v1716921960233!5m2!1sen!2sus&output=embed",
-    mapsUrl: "https://maps.google.com/?q=Sambuca+Copilco+CDMX",
-    facebookUrl: "https://facebook.com/profile.php?id=100080317183250",
+    mapsUrl: "https://maps.app.goo.gl/44MK8bGXDi95rdhZ6",
+    facebookUrl: "https://www.facebook.com/BarSambucaOficial",
   },
   {
     name: "Bar Sambuca Cuauhtémoc",
     address: "Claudio Bernard LOC COM, Doctores, Cuauhtémoc, 06720 CDMX",
     hours: "Jue-Sab 7pm - 3am",
     mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.69742012111!2d-99.14923708897992!3d19.42555098185528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fed528d2288d%3A0x33e5c94625293466!2sBar%20Sambuca%20Cuauht%C3%A9moc!5e0!3m2!1sen!2sus!4v1716922002381!5m2!1sen!2sus&output=embed",
-    mapsUrl: "https://maps.google.com/?q=Bar+Sambuca+Cuauhtemoc+CDMX",
-    facebookUrl: "https://facebook.com/profile.php?id=100071399785044",
+    mapsUrl: "https://maps.app.goo.gl/DjJftxeU3qtERKFPA",
+    facebookUrl: "https://www.facebook.com/BarSambucaOficial",
+  },
+  {
+    name: "Bar Sambuca Roma",
+    address: "Colonia Roma, Cuauhtémoc, CDMX",
+    hours: "Jue-Sab 7pm - 3am",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.9!2d-99.16!3d19.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSambuca%20Roma!5e0!3m2!1ses!2smx&output=embed",
+    mapsUrl: "https://maps.app.goo.gl/bkfyJuo1sG8SM8is5",
+    facebookUrl: "https://www.facebook.com/BarSambucaOficial",
   },
 ];
 
@@ -42,7 +50,7 @@ export function LocationsSection() {
         </div>
 
         {/* Cards grid: 3 columns on desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {branches.map((branch, idx) => (
             <div
               key={idx}

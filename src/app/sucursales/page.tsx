@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Sucursales",
-  description: "Encuentra tu Sambuca más cercano. Tenemos sucursales en San Ángel, Copilco y Cuauhtémoc. ¡Te esperamos para la pre-fiesta!",
+  description: "Encuentra tu Sambuca más cercano. Tenemos sucursales en San Ángel, Copilco, Cuauhtémoc y Roma. ¡Te esperamos para la pre-fiesta!",
 };
 
 export default function SucursalesPage() {

@@ -13,9 +13,10 @@ import {
 } from "@/components/ui/dialog";
 
 const locations = [
-  { name: "San Ángel", url: "https://facebook.com/sambucasanangel" },
-  { name: "Copilco", url: "https://facebook.com/profile.php?id=100080317183250" },
-  { name: "Cuauhtémoc", url: "https://facebook.com/profile.php?id=100071399785044" },
+  { name: "San Ángel", url: "https://www.facebook.com/BarSambucaOficial" },
+  { name: "Copilco", url: "https://www.facebook.com/BarSambucaOficial" },
+  { name: "Cuauhtémoc", url: "https://www.facebook.com/BarSambucaOficial" },
+  { name: "Roma", url: "https://www.facebook.com/BarSambucaOficial" },
 ];
 
 const featuredProducts = [

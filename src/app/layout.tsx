@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "San Ángel",
     "Copilco",
     "Cuauhtémoc",
+    "Roma",
   ],
 };
 

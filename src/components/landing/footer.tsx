@@ -83,7 +83,7 @@ export function Footer() {
                 <Instagram size={22} />
               </a>
               <a
-                href="https://www.facebook.com/sambucasanangel"
+                href="https://www.facebook.com/BarSambucaOficial"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white transition-colors duration-300 hover:text-[#1877F2]"

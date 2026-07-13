@@ -68,6 +68,7 @@ export default function ReservarPage() {
                     <SelectItem value="san-angel">Sambuca San Ángel</SelectItem>
                     <SelectItem value="copilco">Sambuca Copilco</SelectItem>
                     <SelectItem value="cuauhtemoc">Sambuca Cuauhtémoc</SelectItem>
+                    <SelectItem value="roma">Sambuca Roma</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

@@ -5,15 +5,19 @@ import { Facebook } from "lucide-react";
 const locations = [
   {
     name: "Sambuca San Ángel",
-    url: "https://facebook.com/sambucasanangel",
+    url: "https://www.facebook.com/BarSambucaOficial",
   },
   {
     name: "Sambuca Copilco",
-    url: "https://facebook.com/profile.php?id=100080317183250",
+    url: "https://www.facebook.com/BarSambucaOficial",
   },
   {
     name: "Sambuca Cuauhtémoc",
-    url: "https://facebook.com/profile.php?id=100071399785044",
+    url: "https://www.facebook.com/BarSambucaOficial",
+  },
+  {
+    name: "Sambuca Roma",
+    url: "https://www.facebook.com/BarSambucaOficial",
   },
 ];
 
